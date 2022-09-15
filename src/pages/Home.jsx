@@ -1,7 +1,7 @@
-import Contests from '../components/Contests'
+import Events from './Events'
 
 const Home = (props) => {
-  return <Contests />
+  return <Events />
 }
 
 export default Home
