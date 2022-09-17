@@ -18,7 +18,7 @@ const checkedIcon = <CheckBoxIcon fontSize="small" />
 export const Register = () => {
   return (
     <>
-      <section className="d-flex vh-resp justify-content-between bg-blue">
+      <section className="d-flex justify-content-between bg-blue">
         <div className="col-4 d-none d-md-block">
           <img src="Bg.png" className="w-100" />
         </div>
@@ -82,10 +82,41 @@ export const Register = () => {
                 <label className="form-label">
                   Select Your number of choices
                 </label>
-                <input
-                  type="text"
-                  className="form-control bg-transparent"
-                  required
+                <Autocomplete
+                  sx={{
+                    label: { color: "white" },
+                    li: { color: "white" },
+                      '& label.Mui-focused': {
+                        color: 'white',
+                      },
+                      '& .MuiOutlinedInput-root': {
+                        '& fieldset': {
+                          borderColor: 'white',
+                        },
+                        '&:hover fieldset': {
+                          borderColor: 'white',
+                        },
+                      },
+                  }}
+                  multiple
+                  id="checkboxes-tags-demo"
+                  options={events}
+                  disableCloseOnSelect
+                  getOptionLabel={(option) => option.title}
+                  renderOption={(props, option, { selected }) => (
+                    <li {...props}>
+                      <Checkbox
+                        icon={icon}
+                        checkedIcon={checkedIcon}
+                        style={{ marginRight: 8 }}
+                        checked={selected}
+                      />
+                      {option.title}
+                    </li>
+                  )}
+                  renderInput={(params) => (
+                    <TextField {...params} label="events" placeholder='names'/>
+                  )}
                 />
               </div>
             </form>
@@ -95,3 +126,14 @@ export const Register = () => {
     </>
   )
 }
+const events = [
+  { title: "Trade your theory" },
+  { title: "Glitch in the matrix" },
+  { title: "Merge Conflicts" },
+  {title: "Stuck between pixels"},
+  {title:"Last or Lost"},
+  {title:"Masters of the Alog Land"},
+  {title:"Murphys's Mirror"},
+  {title:"house of the High Table"},
+  {title:"Finger Stickin good"},
+];
