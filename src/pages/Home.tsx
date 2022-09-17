@@ -1,15 +1,13 @@
-import { ChakraProvider } from '@chakra-ui/react'
-import styled from '@emotion/styled'
+import Header from '../components/Header'
+import Hero from '../components/Hero'
 
-const H1 = styled.h1`
-  font-size: 40px;
-  background-color: red;
-`
-
-export const Home = () => {
+const Home = () => {
   return (
-    <ChakraProvider resetCSS={true}>
-      <H1>Hello World</H1>
-    </ChakraProvider>
+    <>
+      <Header />
+      <Hero />
+    </>
   )
 }
+
+export default Home
