@@ -81,6 +81,8 @@ const Header = () => {
         display: flex;
         align-items: center;
         justify-content: center;
+
+        display: none;
       `}
     >
       <a
@@ -89,7 +91,7 @@ const Header = () => {
           text-decoration: none;
 
           img {
-            width: 100px;
+            height: 60px;
             margin-top: 10px;
           }
         `}

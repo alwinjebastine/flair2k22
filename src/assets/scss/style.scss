@@ -2,27 +2,5 @@
 @import './contests.scss';
 
 // font imports
-@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
 
 // variables
-$white: #fff;
-$grey: #979ea5;
-
-// base styles
-html,
-body {
-  font-family: 'Raleway', sans-serif;
-  background-color: #0d1117;
-  * {
-    color: $grey;
-  }
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  color: $white;
-}

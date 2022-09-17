@@ -3,11 +3,19 @@
   margin: 0;
 }
 
+html {
+  font-size: 16px;
+  font-family: var(--font-text);
+}
+
 :root {
   --black: #000;
   --white: #fff;
   --l-blue: #66e3ff;
   --d-blue: #004d9b;
+  --orange: #ff5733;
+
   --font-sans: 'Julius Sans One', sans-serif;
   --font-serif: 'Crimson Text', serif;
+  --font-text: 'Archivo', sans-serif;
 }
