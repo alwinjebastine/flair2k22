@@ -46,6 +46,10 @@ export const Register = () => {
           <label className='form-label'>Your Department</label>
           <input type="text" className="form-control bg-transparent" required/>
         </div>
+        <select className='my-4 form-select bg-transparent' aria-label="Default select example">
+        <option selected>Select your wanted number of events</option>
+        <input name="shipwreck" type="checkbox"/>LAST OR LOST
+        </select>
       </form>
       </div>
     </div>
