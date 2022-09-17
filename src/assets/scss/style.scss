@@ -1,0 +1,11 @@
+// stylesheet imports
+@import './contests.scss';
+
+// font imports
+@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+
+// base styles
+html,
+body {
+  font-family: 'Raleway', sans-serif;
+}

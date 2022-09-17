@@ -6,12 +6,10 @@ const H1 = styled.h1`
   background-color: red;
 `
 
-const Home = () => {
+export const Home = () => {
   return (
     <ChakraProvider resetCSS={true}>
       <H1>Hello World</H1>
     </ChakraProvider>
   )
 }
-
-export default Home

@@ -1,7 +1,6 @@
-import './Contests.css'
 import { Box } from '@chakra-ui/react'
 
-const Contests = () => {
+export const Events = () => {
   return (
     <Box w="100%">
       <svg
@@ -23,5 +22,3 @@ const Contests = () => {
     </Box>
   )
 }
-
-export default Contests
