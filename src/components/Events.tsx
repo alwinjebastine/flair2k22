@@ -13,7 +13,7 @@ const BgSvg = () => (
 
       svg {
         position: absolute;
-        z-index: -1;
+        z-index: 1;
       }
     `}
   >
@@ -67,7 +67,6 @@ const Card = () => {
       css={css`
         margin-top: 220px;
         position: relative;
-
         min-width: 250px;
         max-width: 400px;
         padding-left: 50px;
@@ -166,6 +165,7 @@ const Events = () => {
         flex-direction: column;
         align-items: center;
       `}
+      className="bg-white"
     >
       <h3
         css={css`
