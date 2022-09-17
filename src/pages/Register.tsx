@@ -7,7 +7,7 @@
 // year(dropdown)*,
 // event_name(dropdown)*,
 // planned to bring your own laptop*
-import * as React from 'react'
+
 import { Checkbox, TextField, Autocomplete } from '@mui/material'
 import CheckBoxOutlineBlankIcon from '@mui/icons-material/CheckBoxOutlineBlank'
 import CheckBoxIcon from '@mui/icons-material/CheckBox'
@@ -84,24 +84,25 @@ export const Register = () => {
                 </label>
                 <Autocomplete
                   sx={{
-                    label: { color: "white" },
-                    li: { color: "white" },
-                      '& label.Mui-focused': {
-                        color: 'white',
+                    label: { color: 'white' },
+                    li: { color: 'white' },
+                    '& label.Mui-focused': {
+                      color: 'white',
+                    },
+                    '& .MuiOutlinedInput-root': {
+                      '& fieldset': {
+                        borderColor: 'white',
                       },
-                      '& .MuiOutlinedInput-root': {
-                        '& fieldset': {
-                          borderColor: 'white',
-                        },
-                        '&:hover fieldset': {
-                          borderColor: 'white',
-                        },
+                      '&:hover fieldset': {
+                        borderColor: 'white',
                       },
+                    },
                   }}
                   multiple
                   id="checkboxes-tags-demo"
                   options={events}
                   disableCloseOnSelect
+                  className="all-text-white"
                   getOptionLabel={(option) => option.title}
                   renderOption={(props, option, { selected }) => (
                     <li {...props}>
@@ -115,7 +116,7 @@ export const Register = () => {
                     </li>
                   )}
                   renderInput={(params) => (
-                    <TextField {...params} label="events" placeholder='names'/>
+                    <TextField {...params} label="Events" />
                   )}
                 />
               </div>
@@ -127,13 +128,13 @@ export const Register = () => {
   )
 }
 const events = [
-  { title: "Trade your theory" },
-  { title: "Glitch in the matrix" },
-  { title: "Merge Conflicts" },
-  {title: "Stuck between pixels"},
-  {title:"Last or Lost"},
-  {title:"Masters of the Alog Land"},
-  {title:"Murphys's Mirror"},
-  {title:"house of the High Table"},
-  {title:"Finger Stickin good"},
-];
+  { title: 'Trade your theory' },
+  { title: 'Glitch in the matrix' },
+  { title: 'Merge Conflicts' },
+  { title: 'Stuck between pixels' },
+  { title: 'Last or Lost' },
+  { title: 'Masters of the Alog Land' },
+  { title: "Murphys's Mirror" },
+  { title: 'house of the High Table' },
+  { title: 'Finger Stickin good' },
+]

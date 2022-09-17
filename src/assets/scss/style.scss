@@ -54,3 +54,9 @@ select {
 .bg-blue {
   background-color: #0d1117 !important;
 }
+
+.all-text-white {
+  * {
+    color: $white !important;
+  }
+}
