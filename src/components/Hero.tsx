@@ -58,7 +58,6 @@ const Hero = () => {
       css={css`
         width: 100%;
         height: 100vh;
-
         position: relative;
         background-image: url('/Bg.png');
         background-size: cover;
@@ -73,7 +72,9 @@ const Hero = () => {
       >
         <h1 css={tagLineCss}>Unlock.</h1>
         <h1 css={tagLineCss}>Within</h1>
-        <h2 css={ctaCss}>Register Now</h2>
+        <a css={ctaCss} className="h3 text-decoration-none" href="/register">
+          Register Now
+        </a>
       </div>
       <DownArrow
         xCss={css`
