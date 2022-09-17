@@ -97,6 +97,9 @@ const Header = () => {
 
   return (
     <motion.header
+      animate={
+        isVisible ? { opacity: 1 } : { opacity: 0, pointerEvents: 'none' }
+      }
       css={css`
         width: 100%;
         height: 70px;
@@ -127,7 +130,14 @@ const Header = () => {
           }
         `}
       >
-        <img src="./logo.png" alt="logo" />
+        <img
+          src="./logo.png"
+          alt="logo"
+          css={css`
+            position: relative;
+            z-index: 10;
+          `}
+        />
       </a>
       <Icon
         xCss={css`

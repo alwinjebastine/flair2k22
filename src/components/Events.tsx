@@ -158,7 +158,7 @@ const Events = () => {
     <section
       css={css`
         width: 100%;
-        height: 100vh;
+        height: 130vh;
         padding: 40px 50px 0 50px;
         color: var(--black);
 
