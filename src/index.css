@@ -1,0 +1,13 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+:root {
+  --black: #000;
+  --white: #fff;
+  --l-blue: #66e3ff;
+  --d-blue: #004d9b;
+  --font-sans: 'Julius Sans One', sans-serif;
+  --font-serif: 'Crimson Text', serif;
+}
