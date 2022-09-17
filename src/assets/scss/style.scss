@@ -1,5 +1,6 @@
 // stylesheet imports
 @import './contests.scss';
+@import '~/node_modules/bootstrap/scss/bootstrap';
 
 // font imports
 @import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
@@ -9,10 +10,21 @@ $white: #fff;
 $grey: #979ea5;
 
 // base styles
+:root {
+  --black: #000;
+  --white: #fff;
+  --l-blue: #66e3ff;
+  --d-blue: #004d9b;
+  --font-sans: 'Julius Sans One', sans-serif;
+  --font-serif: 'Crimson Text', serif;
+}
+
 html,
 body {
   font-family: 'Raleway', sans-serif;
   background-color: #0d1117;
+  box-sizing: border-box;
+  margin: 0;
   * {
     color: $grey;
   }
