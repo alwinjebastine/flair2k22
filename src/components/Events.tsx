@@ -160,6 +160,7 @@ const Events = () => {
         width: 100%;
         height: 100vh;
         padding: 40px 50px 0 50px;
+        color: var(--black);
 
         display: flex;
         flex-direction: column;

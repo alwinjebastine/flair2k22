@@ -1,6 +1,17 @@
 /** @jsxRuntime classic */
 /** @jsx jsx */
 import { css, jsx, SerializedStyles } from '@emotion/react'
+import { motion } from 'framer-motion'
+import { useState, useEffect } from 'react'
+
+const blackOverlay = css`
+  width: 100vw;
+  height: 100%;
+  top: 0;
+  right: 0;
+  position: absolute;
+  background-color: var(--black);
+`
 
 type IconProps = {
   xCss?: SerializedStyles
@@ -66,13 +77,29 @@ const Icon = ({ xCss, ...props }: IconProps) => (
   </div>
 )
 
+let prevScrollTop = 0
 const Header = () => {
+  const [showOverlay, setOverlay] = useState(false)
+  const [isVisible, setVisible] = useState(true)
+  const checkScroll = () => {
+    window.scrollY > prevScrollTop && setVisible(false)
+
+    window.scrollY < prevScrollTop && setVisible(true)
+    if (window.scrollY != prevScrollTop) {
+      window.scrollY > window.innerHeight ? setOverlay(true) : setOverlay(false)
+    }
+    prevScrollTop = window.scrollY
+    window.requestAnimationFrame(checkScroll)
+  }
+  useEffect(() => {
+    checkScroll()
+  }, [])
+
   return (
-    <div
+    <motion.header
       css={css`
         width: 100%;
         height: 70px;
-        background-color: var(--black);
 
         position: sticky;
         margin-top: -70px;
@@ -81,10 +108,14 @@ const Header = () => {
         display: flex;
         align-items: center;
         justify-content: center;
-
-        display: none;
       `}
     >
+      <motion.div
+        css={blackOverlay}
+        initial={{ y: -100 }}
+        animate={isVisible && showOverlay ? { y: 0 } : { y: -100 }}
+        transition={{ ease: 'easeInOut' }}
+      ></motion.div>
       <a
         href="/"
         css={css`
@@ -109,7 +140,7 @@ const Header = () => {
           console.log('Clicked')
         }}
       />
-    </div>
+    </motion.header>
   )
 }
 
