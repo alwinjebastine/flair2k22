@@ -10,7 +10,7 @@ $grey: #979ea5;
 
 // base styles
 html,
-body {
+body{
   font-family: 'Raleway', sans-serif;
   background-color: #0d1117;
   * {
@@ -25,4 +25,14 @@ h4,
 h5,
 h6 {
   color: $white;
+}
+.bg-white{
+  background-color: $white;
+  color:#020202;
+}
+.vh-resp{
+  height: 90vh;
+}
+input{
+  color: $white !important;
 }

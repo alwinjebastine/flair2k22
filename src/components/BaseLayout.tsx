@@ -7,7 +7,7 @@ interface Props {
 
 export const BaseLayout = ({ children }: Props) => {
   return (
-    <div className="container mx-auto">
+    <div className="mx-auto">
       <div className="flex flex-col min-h-screen">{children}</div>
     </div>
   )
