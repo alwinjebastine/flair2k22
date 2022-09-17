@@ -4,6 +4,8 @@ import { BaseLayout } from './components/BaseLayout'
 import { Home } from './pages/Home'
 import { About } from './pages/About'
 import { Register } from './pages/Register'
+import "bootstrap/dist/js/bootstrap.js";
+import "bootstrap/dist/css/bootstrap.min.css";
 import './assets/scss/style.scss'
 
 const App = () => {
