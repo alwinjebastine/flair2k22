@@ -29,7 +29,7 @@ const Icon = ({ xCss, ...props }: IconProps) => (
       xmlns="http://www.w3.org/2000/svg"
       xmlnsXlink="http://www.w3.org/1999/xlink"
     >
-      <title>4050FBD1-D616-4B4F-BAAE-107F33215314@2x</title>
+      <title>Menu</title>
       <g
         id="Symbols"
         stroke="none"
@@ -83,6 +83,19 @@ const Header = () => {
         justify-content: center;
       `}
     >
+      <a
+        href="/"
+        css={css`
+          text-decoration: none;
+
+          img {
+            width: 100px;
+            margin-top: 10px;
+          }
+        `}
+      >
+        <img src="./logo.png" alt="logo" />
+      </a>
       <Icon
         xCss={css`
           position: absolute;
