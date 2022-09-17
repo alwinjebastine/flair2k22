@@ -1,5 +1,6 @@
 import React, { ReactNode } from 'react'
 import PropTypes from 'prop-types'
+import Header from '../components/Header'
 
 interface Props {
   children?: ReactNode
@@ -7,9 +8,10 @@ interface Props {
 
 export const BaseLayout = ({ children }: Props) => {
   return (
-    <div className="container mx-auto">
-      <div className="flex flex-col min-h-screen">{children}</div>
-    </div>
+    <section className="mx-auto">
+      <Header />
+      <div>{children}</div>
+    </section>
   )
 }
 

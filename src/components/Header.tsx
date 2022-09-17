@@ -68,25 +68,10 @@ const Icon = ({ xCss, ...props }: IconProps) => (
 
 const Header = () => {
   return (
-    <div
-      css={css`
-        width: 100%;
-        height: 70px;
-        background-color: var(--black);
-
-        position: sticky;
-        margin-top: -70px;
-        z-index: 20;
-        top: 0;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-      `}
-    >
+    <section className="container-fluid py-3 bg-black w-100 position-sticky d-flex justify-content-between align-items-center">
+      <h3>Flair2k22</h3>
       <Icon
         xCss={css`
-          position: absolute;
-          right: 25px;
           cursor: pointer;
         `}
         onClick={() => {
@@ -94,7 +79,7 @@ const Header = () => {
           console.log('Clicked')
         }}
       />
-    </div>
+    </section>
   )
 }
 
