@@ -36,6 +36,7 @@ const ctaCss = css`
   font-family: var(--font-serif);
   color: var(--l-blue);
   cursor: pointer;
+  font-weight: 100;
 
   display: inline-block;
   position: relative;

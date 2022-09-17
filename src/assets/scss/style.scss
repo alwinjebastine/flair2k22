@@ -10,31 +10,47 @@ $white: #fff;
 $grey: #979ea5;
 
 // base styles
+html {
+  font-size: 16px;
+  font-family: var(--font-text);
+}
+
 :root {
   --black: #000;
   --white: #fff;
   --l-blue: #66e3ff;
   --d-blue: #004d9b;
+  --orange: #ff5733;
+
   --font-sans: 'Julius Sans One', sans-serif;
   --font-serif: 'Crimson Text', serif;
+  --font-text: 'Archivo', sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
 }
 
 html,
 body {
   font-family: 'Raleway', sans-serif;
-  background-color: #0d1117;
-  box-sizing: border-box;
-  margin: 0;
-  * {
-    color: $grey;
-  }
+  color: $white;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  color: $white;
+.bg-white {
+  background-color: $white;
+  color: #020202;
+}
+.vh-resp {
+  height: 90vh;
+}
+input {
+  color: $white !important;
+}
+select {
+  color: $white !important;
+}
+.bg-blue {
+  background-color: #0d1117 !important;
 }

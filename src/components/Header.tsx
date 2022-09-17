@@ -1,6 +1,17 @@
 /** @jsxRuntime classic */
 /** @jsx jsx */
 import { css, jsx, SerializedStyles } from '@emotion/react'
+import { motion } from 'framer-motion'
+import { useState, useEffect } from 'react'
+
+const blackOverlay = css`
+  width: 100vw;
+  height: 100%;
+  top: 0;
+  right: 0;
+  position: absolute;
+  background-color: var(--black);
+`
 
 type IconProps = {
   xCss?: SerializedStyles
@@ -29,7 +40,7 @@ const Icon = ({ xCss, ...props }: IconProps) => (
       xmlns="http://www.w3.org/2000/svg"
       xmlnsXlink="http://www.w3.org/1999/xlink"
     >
-      <title>4050FBD1-D616-4B4F-BAAE-107F33215314@2x</title>
+      <title>Menu</title>
       <g
         id="Symbols"
         stroke="none"
@@ -66,10 +77,68 @@ const Icon = ({ xCss, ...props }: IconProps) => (
   </div>
 )
 
+let prevScrollTop = 0
 const Header = () => {
+  const [showOverlay, setOverlay] = useState(false)
+  const [isVisible, setVisible] = useState(true)
+  const checkScroll = () => {
+    window.scrollY > prevScrollTop && setVisible(false)
+
+    window.scrollY < prevScrollTop && setVisible(true)
+    if (window.scrollY != prevScrollTop) {
+      window.scrollY > window.innerHeight ? setOverlay(true) : setOverlay(false)
+    }
+    prevScrollTop = window.scrollY
+    window.requestAnimationFrame(checkScroll)
+  }
+  useEffect(() => {
+    checkScroll()
+  }, [])
+
   return (
-    <section className="container-fluid py-3 bg-black w-100 position-sticky d-flex justify-content-between align-items-center">
-      <h3>Flair2k22</h3>
+    <motion.header
+      animate={
+        isVisible ? { opacity: 1 } : { opacity: 0, pointerEvents: 'none' }
+      }
+      css={css`
+        width: 100%;
+        height: 70px;
+
+        position: sticky;
+        margin-top: -70px;
+        z-index: 20;
+        top: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      `}
+    >
+      <motion.div
+        css={blackOverlay}
+        initial={{ y: -100 }}
+        animate={isVisible && showOverlay ? { y: 0 } : { y: -100 }}
+        transition={{ ease: 'easeInOut' }}
+      ></motion.div>
+      <a
+        href="/"
+        css={css`
+          text-decoration: none;
+
+          img {
+            height: 60px;
+            margin-top: 10px;
+          }
+        `}
+      >
+        <img
+          src="./logo.png"
+          alt="logo"
+          css={css`
+            position: relative;
+            z-index: 10;
+          `}
+        />
+      </a>
       <Icon
         xCss={css`
           cursor: pointer;
@@ -79,7 +148,7 @@ const Header = () => {
           console.log('Clicked')
         }}
       />
-    </section>
+    </motion.header>
   )
 }
 
