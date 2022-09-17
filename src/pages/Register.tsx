@@ -15,7 +15,7 @@ const submitHandler = ({ values }: FormState) => console.log(values)
 export const Register = () => {
   return (
     <>
-    <section className="d-flex vh-resp justify-content-between">
+    <section className="d-flex vh-resp justify-content-between bg-blue">
     <div className="col-4 d-none d-md-block"><img src="Bg.png" className="w-100"/></div>
     <div className="me-md-5 col-md-7 col-sm-12 text-center p-md-5">
       <div className='m-5'>
@@ -44,6 +44,10 @@ export const Register = () => {
         </div>
         <div className="my-4 text-start d-grid gap-2">
           <label className='form-label'>Your Department</label>
+          <input type="text" className="form-control bg-transparent" required/>
+        </div>
+        <div className="my-4 text-start d-grid gap-2">
+          <label className='form-label'>Select Your number of choices</label>
           <input type="text" className="form-control bg-transparent" required/>
         </div>
       </form>

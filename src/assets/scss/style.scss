@@ -13,7 +13,7 @@ html,
 body {
   font-family: 'Raleway', sans-serif;
   * {
-    color: $grey;
+    color: $white;
   }
 }
 
@@ -26,4 +26,10 @@ body {
 }
 input {
   color: $white !important;
+}
+select{
+  color:$white !important;
+}
+.bg-blue{
+  background-color: #0d1117 !important;
 }
