@@ -1,11 +1,20 @@
-//(reg.no/roll no)*,name*,email id*,phone number(whatsapp)*,college_name*,department*,year(dropdown)*,event_name(dropdown)*,planned to bring your own laptop*,
-import { Form, Input, Select, Checkbox, Relevant, Debug } from 'informed'
+// (reg.no/roll no)*,
+// name*,
+// email id*,
+// phone number(whatsapp)*,
+// college_name*,
+// department*,
+// year(dropdown)*,
+// event_name(dropdown)*,
+// planned to bring your own laptop*
 
-const onSubmit = ({ values }) => console.log(values)
+import { Form, Input, Select, Debug, FormState } from 'informed'
 
-const Register = () => {
+const submitHandler = ({ values }: FormState) => console.log(values)
+
+export const Register = () => {
   return (
-    <Form onSubmit={onSubmit}>
+    <Form onSubmit={submitHandler}>
       <Input
         name="rno"
         label="Register Number/Roll No"
@@ -38,7 +47,7 @@ const Register = () => {
         name="department"
         label="Department"
         placeholder="name of your department"
-        requied="department required"
+        required="department required"
       />
       <Select name="Year" label="Year">
         <option value="ms">I YEAR</option>
@@ -57,5 +66,3 @@ const Register = () => {
     </Form>
   )
 }
-
-export default Register
