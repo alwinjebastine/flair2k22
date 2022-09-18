@@ -35,6 +35,7 @@ const tagLineCss = css`
 const ctaCss = css`
   font-family: var(--font-serif);
   color: var(--l-blue);
+  text-decoration: none;
   cursor: pointer;
   font-weight: 100;
 
@@ -48,8 +49,21 @@ const ctaCss = css`
     display: block;
     position: absolute;
     width: 100%;
+    margin-top: 4px;
     height: 1px;
     background-color: var(--l-blue);
+
+    transform: scaleX(0);
+    transform-origin: right center;
+    transition: transform cubic-bezier(0.19, 1, 0.22, 1) 0.6s;
+  }
+
+  &:hover {
+    color: var(--white);
+  }
+  &:hover::after {
+    transform: scaleX(1);
+    transform-origin: left center;
   }
 `
 const Hero = () => {
@@ -57,7 +71,7 @@ const Hero = () => {
     <div
       css={css`
         width: 100%;
-        height: 100vh;
+        height: ${window.innerHeight}px;
 
         position: relative;
         background-image: url('/Bg.png');
@@ -73,7 +87,9 @@ const Hero = () => {
       >
         <h1 css={tagLineCss}>Unlock.</h1>
         <h1 css={tagLineCss}>Within</h1>
-        <h2 css={ctaCss}>Register Now</h2>
+        <a href="/register" css={ctaCss}>
+          Register Now
+        </a>
       </div>
       <DownArrow
         xCss={css`

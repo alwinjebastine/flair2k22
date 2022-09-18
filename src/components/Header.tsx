@@ -25,11 +25,11 @@ const Icon = ({ xCss, ...props }: IconProps) => (
 
       width: 35px;
       height: 35px;
-      border-radius: 50%;
+      /* border-radius: 50%;*/
       padding: 5px;
 
-      border: 1px solid #3e8261;
-      background-color: #dff5ff;
+      /* border: 1px solid var(--white); */
+      /* background-color: #dff5ff; */
     `}
   >
     <svg
@@ -48,7 +48,7 @@ const Icon = ({ xCss, ...props }: IconProps) => (
         fill="none"
         fillRule="evenodd"
       >
-        <g id="icon-/-hamburger-/-dark" fill="#015CA1" fillRule="nonzero">
+        <g id="icon-/-hamburger-/-dark" fill="var(--white)" fillRule="nonzero">
           <g id="Menu---Hamburger-2" transform="translate(3.000000, 4.000000)">
             <path
               d="M1,1.90559878 C2.00134614,1.75253201 3.00269227,1.6504875 3.99596159,1.52293187 C4.99730197,1.40812952 5.9986481,1.31246393 7,1.23593054 C8.00136342,1.15302279 9.00266923,0.897911515 9.99596735,1.04459936 C10.4966491,1.10200054 10.9972732,1.19128721 11.4979549,1.32522176 C11.9986366,1.45915177 12.4993183,1.6313553 13,1.90559878 L13,2.09692996 C12.4993183,2.37117345 11.9986366,2.54337697 11.4979549,2.67730698 C10.9972732,2.81762045 10.4966491,2.90053276 9.99596735,2.95792938 C8.99460394,3.09824286 8.00136342,2.8495105 7,2.7665982 C5.9986481,2.6836859 4.99730197,2.58802031 3.99596159,2.47959688 C3.00269227,2.35204124 2.00134614,2.24999673 1,2.09692996 L1,1.90559878 Z"
@@ -86,13 +86,17 @@ const Header = () => {
 
     window.scrollY < prevScrollTop && setVisible(true)
     if (window.scrollY != prevScrollTop) {
-      window.scrollY > window.innerHeight ? setOverlay(true) : setOverlay(false)
+      window.scrollY > window.innerHeight - 70
+        ? setOverlay(true)
+        : setOverlay(false)
     }
     prevScrollTop = window.scrollY
-    window.requestAnimationFrame(checkScroll)
+    // window.requestAnimationFrame(checkScroll)
   }
   useEffect(() => {
-    checkScroll()
+    window.onscroll = () => {
+      checkScroll()
+    }
   }, [])
 
   return (
