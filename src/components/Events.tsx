@@ -25,7 +25,7 @@ const BgSvg = ({
 
         svg {
           position: absolute;
-          z-index: -1;
+          z-index: 1;
         }
       `}
     >
@@ -167,6 +167,8 @@ const Card = (props: CardsProps) => {
         max-width: 400px;
         background-color: var(--white);
         padding: 30px 0 30px 50px;
+
+        z-index: 5;
       `}
     >
       <span
@@ -209,6 +211,7 @@ const Card = (props: CardsProps) => {
         css={css`
           margin-bottom: 25px;
           font-size: 16px;
+          font-family: var(--font-text);
         `}
       >
         {props.description}
@@ -264,6 +267,7 @@ const Events = () => {
         display: flex;
         flex-direction: column;
         align-items: center;
+        background-color: var(--white);
       `}
     >
       <h3
