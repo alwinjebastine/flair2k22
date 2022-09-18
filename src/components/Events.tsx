@@ -122,7 +122,6 @@ const Card = (props: CardsProps) => {
       return
     }
     done = true
-    console.log('started')
     const dur = 3
     switch (props.sNo) {
       case 1:
@@ -185,12 +184,11 @@ const Card = (props: CardsProps) => {
 
         z-index: 5;
         ${mq['md']} {
-          font-size: 1.3em;
+          font-size: 1.2em;
           padding: 30px 0 30px 60px;
         }
 
         ${mq['lg']} {
-          font-size: 1.6em;
           background-color: transparent;
           align-self: var(--pos);
           padding: 30px 0 30px 70px;
@@ -206,10 +204,6 @@ const Card = (props: CardsProps) => {
           font-family: var(--font-sans);
           display: flex;
           flex-direction: column;
-
-          ${mq['lg']} {
-            left: -10px;
-          }
         `}
       >
         <span
@@ -237,7 +231,7 @@ const Card = (props: CardsProps) => {
           font-weight: bold;
 
           ${mq['lg']} {
-            margin-bottom: 30px;
+            margin-bottom: 20px;
           }
         `}
       >
@@ -266,7 +260,7 @@ const Card = (props: CardsProps) => {
             a {
               padding: 15px 45px;
             }
-            margin-top: 20px;
+            margin-top: 15px;
           }
         `}
       >
@@ -344,7 +338,7 @@ const Events = () => {
           display: inline-block;
 
           ${mq['lg']} {
-            font-size: 36px;
+            font-size: 28px;
             margin-bottom: 20px;
             margin-top: 40px;
           }
@@ -372,7 +366,7 @@ const Events = () => {
           justify-content: space-between;
 
           width: 90%;
-          max-width: 1200px;
+          max-width: 1100px;
 
           ${mq['lg']} {
             height: 5700px;

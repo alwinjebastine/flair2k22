@@ -4,6 +4,7 @@ import { css, jsx, SerializedStyles } from '@emotion/react'
 import { motion } from 'framer-motion'
 import { useState, useEffect } from 'react'
 import mq from '../utils/mq'
+import NavList from './NavList'
 
 const HamMenu = ({ closeMenu }: { closeMenu: () => void }) => {
   return (
@@ -52,7 +53,7 @@ const HamMenu = ({ closeMenu }: { closeMenu: () => void }) => {
           height: 100%;
           max-height: 320px;
           font-family: var(--font-sans);
-          font-size: 26px;
+          font-size: 20px;
 
           color: var(--black);
           display: flex;
@@ -62,6 +63,7 @@ const HamMenu = ({ closeMenu }: { closeMenu: () => void }) => {
 
           ${mq['md']} {
             top: 50%;
+            font-size: 1.5em;
             transform: translateY(-55%);
             right: 50px;
             max-height: 400px;
@@ -69,21 +71,17 @@ const HamMenu = ({ closeMenu }: { closeMenu: () => void }) => {
           a {
             text-decoration: none;
             cursor: pointer;
+            user-select: none;
+            transition: all ease-in-out 0.1s;
+            &:active {
+              position: relative;
+              font-size: 24px;
+              font-weight: 600;
+            }
           }
         `}
       >
-        <a>
-          <li>Home</li>
-        </a>
-        <a>
-          <li>Events</li>
-        </a>
-        <a>
-          <li>Register</li>
-        </a>
-        <a>
-          <li>About</li>
-        </a>
+        <NavList closeMenu={closeMenu} />
       </ul>
     </nav>
   )
@@ -93,8 +91,8 @@ const blackOverlay = css`
   width: 100vw;
   height: 100%;
   top: 0;
-  @media (min-width: 1400px) {
-    left: calc((1400px - 100vw) / 2);
+  @media (min-width: 1200px) {
+    left: calc((1200px - 100vw) / 2);
   }
   position: absolute;
   z-index: -1;
@@ -195,9 +193,13 @@ const Header = () => {
 
     if (window.scrollY != prevScrollTop) {
       setHamburger(false)
-      window.scrollY > window.innerHeight - 70
-        ? setOverlay(true)
-        : setOverlay(false)
+      if (window.location.pathname === '/') {
+        window.scrollY > window.innerHeight - 70
+          ? setOverlay(true)
+          : setOverlay(false)
+      } else {
+        window.scrollY < prevScrollTop ? setOverlay(true) : setOverlay(false)
+      }
     }
     prevScrollTop = window.scrollY
     // window.requestAnimationFrame(checkScroll)
@@ -215,7 +217,7 @@ const Header = () => {
       }
       css={css`
         width: 100%;
-        max-width: 1400px;
+        max-width: 1200px;
         left: 50%;
         transform: translateX(-50%);
 
@@ -257,7 +259,7 @@ const Header = () => {
             margin-top: 10px;
 
             ${mq['md']} {
-              height: 80px;
+              height: 60px;
             }
 
             ${mq['lg']} {
@@ -279,9 +281,9 @@ const Header = () => {
         css={css`
           display: none;
           font-family: var(--font-sans);
-          font-size: 20px;
+          font-size: 16px;
           width: 50%;
-          max-width: 500px;
+          max-width: 420px;
           margin-left: auto;
           margin-right: 50px;
 
@@ -317,18 +319,7 @@ const Header = () => {
           }
         `}
       >
-        <li>
-          <a>Home</a>
-        </li>
-        <li>
-          <a>Events</a>
-        </li>
-        <li>
-          <a>Register</a>
-        </li>
-        <li>
-          <a>About</a>
-        </li>
+        <NavList />
       </ul>
       <Icon
         close={showHamburger}
@@ -337,8 +328,8 @@ const Header = () => {
           right: 25px;
           cursor: pointer;
           ${mq['md']} {
-            width: 50px;
-            height: 50px;
+            width: 40px;
+            height: 40px;
             right: 40px;
           }
 

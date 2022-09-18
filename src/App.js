@@ -10,16 +10,16 @@ import './assets/scss/style.scss'
 
 const App = () => {
   return (
-    <BaseLayout>
-      <Router>
+    <Router>
+      <BaseLayout>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/events" element={<Events />} />
           <Route path="/register" element={<Register />} />
         </Routes>
-      </Router>
-    </BaseLayout>
+      </BaseLayout>
+    </Router>
   )
 }
 
