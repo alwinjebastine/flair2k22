@@ -3,6 +3,7 @@
 import { css, jsx, SerializedStyles } from '@emotion/react'
 import { motion } from 'framer-motion'
 import { useState, useEffect } from 'react'
+import mq from '../utils/mq'
 
 const HamMenu = ({ closeMenu }: { closeMenu: () => void }) => {
   return (
@@ -14,6 +15,7 @@ const HamMenu = ({ closeMenu }: { closeMenu: () => void }) => {
         width: 100%;
         /* right: 0; */
         top: 0;
+        right: 0;
         text-align: end;
         height: ${window.innerHeight}px;
         background-color: rgba(0, 0, 0, 0.7);
@@ -21,6 +23,13 @@ const HamMenu = ({ closeMenu }: { closeMenu: () => void }) => {
       onClick={closeMenu}
     >
       <svg
+        css={css`
+          max-width: 430px;
+          ${mq['md']} {
+            width: 80%;
+            max-width: 650px;
+          }
+        `}
         onClick={(e) => {
           e.stopPropagation()
         }}
@@ -50,6 +59,13 @@ const HamMenu = ({ closeMenu }: { closeMenu: () => void }) => {
           justify-content: space-around;
 
           flex-direction: column;
+
+          ${mq['md']} {
+            top: 50%;
+            transform: translateY(-55%);
+            right: 50px;
+            max-height: 400px;
+          }
           a {
             text-decoration: none;
             cursor: pointer;
@@ -77,7 +93,9 @@ const blackOverlay = css`
   width: 100vw;
   height: 100%;
   top: 0;
-  right: 0;
+  @media (min-width: 1400px) {
+    left: calc((1400px - 100vw) / 2);
+  }
   position: absolute;
   z-index: -1;
   background-color: var(--black);
@@ -96,11 +114,7 @@ const Icon = ({ xCss, close = true, ...props }: IconProps) => (
 
       width: 35px;
       height: 35px;
-      /* border-radius: 50%;*/
       padding: 5px;
-
-      /* border: 1px solid var(--white); */
-      /* background-color: #dff5ff; */
     `}
   >
     {close ? (
@@ -201,15 +215,23 @@ const Header = () => {
       }
       css={css`
         width: 100%;
-        height: 70px;
+        max-width: 1400px;
+        left: 50%;
+        transform: translateX(-50%);
 
-        position: sticky;
-        margin-top: -70px;
+        position: fixed;
         z-index: 20;
         top: 0;
         display: flex;
         align-items: center;
         justify-content: center;
+        ${mq['md']} {
+          padding-top: 10px;
+        }
+        ${mq['lg']} {
+          justify-content: flex-start;
+          /* align-items: initial; */
+        }
       `}
     >
       {showHamburger && (
@@ -233,6 +255,14 @@ const Header = () => {
           img {
             height: 60px;
             margin-top: 10px;
+
+            ${mq['md']} {
+              height: 80px;
+            }
+
+            ${mq['lg']} {
+              margin-left: 25px;
+            }
           }
         `}
       >
@@ -245,12 +275,76 @@ const Header = () => {
           `}
         />
       </a>
+      <ul
+        css={css`
+          display: none;
+          font-family: var(--font-sans);
+          font-size: 20px;
+          width: 50%;
+          max-width: 500px;
+          margin-left: auto;
+          margin-right: 50px;
+
+          color: var(--white);
+          justify-content: space-between;
+          a {
+            text-decoration: none;
+            cursor: pointer;
+            position: relative;
+            display: block;
+            padding: 5px 5px;
+            text-align: center;
+
+            &:before {
+              content: '';
+              position: absolute;
+              width: 100%;
+              height: 1px;
+              background-color: var(--white);
+              bottom: -4px;
+              transform: scaleX(0);
+              transform-origin: right center;
+              transition: transform cubic-bezier(0.19, 1, 0.22, 1) 0.6s;
+            }
+
+            &:hover::before {
+              transform: scaleX(1);
+              transform-origin: left center;
+            }
+          }
+          ${mq['lg']} {
+            display: flex;
+          }
+        `}
+      >
+        <li>
+          <a>Home</a>
+        </li>
+        <li>
+          <a>Events</a>
+        </li>
+        <li>
+          <a>Register</a>
+        </li>
+        <li>
+          <a>About</a>
+        </li>
+      </ul>
       <Icon
         close={showHamburger}
         xCss={css`
           position: absolute;
           right: 25px;
           cursor: pointer;
+          ${mq['md']} {
+            width: 50px;
+            height: 50px;
+            right: 40px;
+          }
+
+          ${mq['lg']} {
+            display: none;
+          }
         `}
         onClick={() => {
           setHamburger(!showHamburger)

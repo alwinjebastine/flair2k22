@@ -10,7 +10,7 @@ export const BaseLayout = ({ children }: Props) => {
   return (
     <section className="mx-auto">
       <Header />
-      <div>{children}</div>
+      {children}
     </section>
   )
 }

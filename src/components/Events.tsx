@@ -133,7 +133,7 @@ const Card = (props: CardsProps) => {
           },
         })
         props.controls2.start({
-          pathLength: 0.05,
+          pathLength: 0.065,
           transition: {
             delay: dur / 2,
             duration: dur / 2,
@@ -141,7 +141,7 @@ const Card = (props: CardsProps) => {
         })
         break
       case 2:
-        animate(0.14, dur)
+        animate(0.148, dur)
         break
       case 3:
         animate(0.28, dur)
@@ -159,7 +159,7 @@ const Card = (props: CardsProps) => {
         animate(0.78, dur)
         break
       case 8:
-        animate(0.88, dur)
+        animate(0.89, dur)
         break
       case 9:
         animate(1, dur)
@@ -185,12 +185,15 @@ const Card = (props: CardsProps) => {
 
         z-index: 5;
         ${mq['md']} {
-          font-size: 1.5em;
+          font-size: 1.3em;
+          padding: 30px 0 30px 60px;
         }
 
         ${mq['lg']} {
+          font-size: 1.6em;
           background-color: transparent;
           align-self: var(--pos);
+          padding: 30px 0 30px 70px;
         }
       `}
     >
@@ -203,10 +206,15 @@ const Card = (props: CardsProps) => {
           font-family: var(--font-sans);
           display: flex;
           flex-direction: column;
+
+          ${mq['lg']} {
+            left: -10px;
+          }
         `}
       >
         <span
           css={css`
+            font-weight: bold;
             &:after {
               content: '';
               display: block;
@@ -226,6 +234,11 @@ const Card = (props: CardsProps) => {
           font-family: var(--font-sans);
           font-size: 1.25em;
           margin-bottom: 15px;
+          font-weight: bold;
+
+          ${mq['lg']} {
+            margin-bottom: 30px;
+          }
         `}
       >
         {props.title}
@@ -243,22 +256,17 @@ const Card = (props: CardsProps) => {
         css={css`
           border: 1px solid var(--d-blue);
           display: inline-block;
-          background-color: var(--d-blue);
-          border-radius: 12px;
+          background-color: var(--white);
+          /* border-radius: 12px; */
+          position: relative;
+          margin-top: 10px;
 
           ${mq['lg']} {
-            border-radius: 40px;
+            /* border-radius: 40px; */
             a {
-              padding: 10px 20px;
+              padding: 15px 45px;
             }
-          }
-
-          &:hover {
-            background-color: var(--white);
-
-            a {
-              color: var(--d-blue);
-            }
+            margin-top: 20px;
           }
         `}
       >
@@ -269,14 +277,43 @@ const Card = (props: CardsProps) => {
           css={css`
             font-family: var(--font-serif);
             text-decoration: none;
-            color: var(--white);
+            color: var(--d-blue);
             display: block;
             cursor: pointer;
-            padding: 5px 12px;
+            position: relative;
+            padding: 10px 30px;
+            width: 100%;
+            height: 100%;
+            z-index: 10;
+
+            transition: color ease-out 0.3s;
+
+            &:hover {
+              color: var(--white);
+
+              & + div {
+                transform: scaleY(1);
+                transform-origin: bottom center;
+              }
+            }
           `}
         >
           Learn More
         </a>
+        <div
+          css={css`
+            width: 100%;
+            height: 100%;
+            border-radius: inherit;
+            top: 0;
+            position: absolute;
+            z-index: 1;
+            transform: scaleY(0);
+            transform-origin: top center;
+            background-color: var(--d-blue);
+            transition: transform cubic-bezier(0.19, 1, 0.22, 1) 0.6s;
+          `}
+        ></div>
       </div>
     </motion.div>
   )
