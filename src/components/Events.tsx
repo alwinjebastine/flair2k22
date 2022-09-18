@@ -5,6 +5,7 @@ import { motion, useAnimation, AnimationControls } from 'framer-motion'
 import { useNavigate, NavigateFunction } from 'react-router-dom'
 
 import events from '../utils/events'
+import mq from '../utils/mq'
 
 const BgSvg = ({
   controls1,
@@ -26,14 +27,24 @@ const BgSvg = ({
         svg {
           position: absolute;
           z-index: 1;
+          --mt: 40px;
+        }
+
+        ${mq['lg']} {
+          svg {
+            width: 350px;
+            height: auto;
+            --mt: 60px;
+          }
         }
       `}
     >
       <svg
         css={css`
           stroke: var(--d-blue);
+          text-align: center;
         `}
-        width="86"
+        width="253"
         height="157"
         viewBox="0 0 86 157"
         fill="none"
@@ -48,7 +59,7 @@ const BgSvg = ({
       </svg>
       <svg
         css={css`
-          margin-top: 40px;
+          margin-top: var(--mt);
         `}
         width="253"
         height="4008"
@@ -106,69 +117,81 @@ const Card = (props: CardsProps) => {
       },
     })
   }
+  const svgDraw = () => {
+    if (done) {
+      return
+    }
+    done = true
+    console.log('started')
+    const dur = 3
+    switch (props.sNo) {
+      case 1:
+        props.controls1.start({
+          pathLength: 1,
+          transition: {
+            duration: dur / 2,
+          },
+        })
+        props.controls2.start({
+          pathLength: 0.05,
+          transition: {
+            delay: dur / 2,
+            duration: dur / 2,
+          },
+        })
+        break
+      case 2:
+        animate(0.14, dur)
+        break
+      case 3:
+        animate(0.28, dur)
+        break
+      case 4:
+        animate(0.43, dur)
+        break
+      case 5:
+        animate(0.56, dur)
+        break
+      case 6:
+        animate(0.63, dur)
+        break
+      case 7:
+        animate(0.78, dur)
+        break
+      case 8:
+        animate(0.88, dur)
+        break
+      case 9:
+        animate(1, dur)
+        break
+    }
+  }
   let done = false
   return (
     <motion.div
       viewport={{ once: true }}
-      onViewportEnter={() => {
-        if (done) {
-          return
-        }
-        done = true
-        console.log('started')
-        const dur = 3
-        switch (props.sNo) {
-          case 1:
-            props.controls1.start({
-              pathLength: 1,
-              transition: {
-                duration: dur / 2,
-              },
-            })
-            props.controls2.start({
-              pathLength: 0.05,
-              transition: {
-                delay: dur / 2,
-                duration: dur / 2,
-              },
-            })
-            break
-          case 2:
-            animate(0.14, dur)
-            break
-          case 3:
-            animate(0.28, dur)
-            break
-          case 4:
-            animate(0.43, dur)
-            break
-          case 5:
-            animate(0.56, dur)
-            break
-          case 6:
-            animate(0.63, dur)
-            break
-          case 7:
-            animate(0.78, dur)
-            break
-          case 8:
-            animate(0.88, dur)
-            break
-          case 9:
-            animate(1, dur)
-            break
-        }
+      onViewportEnter={svgDraw}
+      style={{
+        ['--pos' as any]: props.sNo % 2 !== 0 ? 'flex-start' : 'flex-end',
       }}
       css={css`
         position: relative;
 
         min-height: 150px;
         min-width: 250px;
-        max-width: 400px;
+        max-width: 500px;
         background-color: var(--white);
         padding: 30px 0 30px 50px;
 
         z-index: 5;
+        ${mq['md']} {
+          font-size: 1.5em;
+        }
+
+        ${mq['lg']} {
+          background-color: transparent;
+          align-self: var(--pos);
+        }
       `}
     >
       <span
@@ -201,7 +224,7 @@ const Card = (props: CardsProps) => {
       <h3
         css={css`
           font-family: var(--font-sans);
-          font-size: 20px;
+          font-size: 1.25em;
           margin-bottom: 15px;
         `}
       >
@@ -210,7 +233,7 @@ const Card = (props: CardsProps) => {
       <p
         css={css`
           margin-bottom: 25px;
-          font-size: 16px;
+          font-size: 1em;
           font-family: var(--font-text);
         `}
       >
@@ -222,6 +245,13 @@ const Card = (props: CardsProps) => {
           display: inline-block;
           background-color: var(--d-blue);
           border-radius: 12px;
+
+          ${mq['lg']} {
+            border-radius: 40px;
+            a {
+              padding: 10px 20px;
+            }
+          }
 
           &:hover {
             background-color: var(--white);
@@ -276,6 +306,12 @@ const Events = () => {
           font-size: 24px;
           display: inline-block;
 
+          ${mq['lg']} {
+            font-size: 36px;
+            margin-bottom: 20px;
+            margin-top: 40px;
+          }
+
           &:after {
             content: '';
             display: block;
@@ -294,8 +330,16 @@ const Events = () => {
           margin-top: 155px;
           display: flex;
           flex-direction: column;
+          align-items: center;
           height: 4100px;
           justify-content: space-between;
+
+          width: 90%;
+          max-width: 1200px;
+
+          ${mq['lg']} {
+            height: 5700px;
+          }
         `}
       >
         {events.map((event, index) => {
