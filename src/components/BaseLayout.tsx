@@ -1,12 +1,18 @@
 import React, { ReactNode } from 'react'
 import PropTypes from 'prop-types'
+import Header from '../components/Header'
 
 interface Props {
   children?: ReactNode
 }
 
 export const BaseLayout = ({ children }: Props) => {
-  return <div className="flex flex-col min-h-screen">{children}</div>
+  return (
+    <section className="mx-auto">
+      <Header />
+      <div>{children}</div>
+    </section>
+  )
 }
 
 BaseLayout.propTypes = {
