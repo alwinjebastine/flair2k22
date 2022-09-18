@@ -4,6 +4,63 @@ import { css, jsx, SerializedStyles } from '@emotion/react'
 import { motion } from 'framer-motion'
 import { useState, useEffect } from 'react'
 
+const HamMenu = () => {
+  return (
+    <nav
+      css={css`
+        position: absolute;
+        /* z-index: 20; */
+        width: 100%;
+        /* right: 0; */
+        top: 0;
+        text-align: end;
+        height: ${window.innerHeight}px;
+        background-color: rgba(0, 0, 0, 0.7);
+      `}
+    >
+      <svg
+        width="315"
+        height="535"
+        viewBox="0 2 315 535"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M76.5 1.25919L315 1.25918V535C283.713 534.11 250.431 535 203.5 535C156.569 535 125.951 529.641 113.5 482.5L15 119.5C-27.2744 -24.6271 31.311 4.00001 76.5 1.25919Z"
+          fill="white"
+        />
+      </svg>
+      <ul
+        css={css`
+          position: absolute;
+          top: 120px;
+          right: 0;
+
+          color: var(--black);
+          display: flex;
+          flex-direction: column;
+          a {
+            text-decoration: none;
+          }
+        `}
+      >
+        <a>
+          <li>Home</li>
+        </a>
+        <a>
+          <li>Events</li>
+        </a>
+        <a>
+          <li>Register</li>
+        </a>
+        <a>
+          <li>About Us</li>
+        </a>
+      </ul>
+    </nav>
+  )
+}
+
 const blackOverlay = css`
   width: 100vw;
   height: 100%;
@@ -117,6 +174,7 @@ const Header = () => {
         justify-content: center;
       `}
     >
+      <HamMenu />
       <motion.div
         css={blackOverlay}
         initial={{ y: -100 }}
