@@ -228,13 +228,14 @@ const Header = () => {
         align-items: center;
         justify-content: center;
         ${mq['md']} {
-          padding-top: 10px;
+          // padding-top: 10px;
         }
         ${mq['lg']} {
           justify-content: flex-start;
           /* align-items: initial; */
         }
       `}
+      className="rounded"
     >
       {showHamburger && (
         <HamMenu

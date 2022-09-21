@@ -173,33 +173,33 @@ const Card = (props: CardsProps) => {
       style={{
         ['--pos' as any]: props.sNo % 2 !== 0 ? 'flex-start' : 'flex-end',
       }}
+      className="bg-dark rounded-curve shadow-white p-5 d-flex justify-content-between align-items-start"
       css={css`
-        position: relative;
-
+        // position: relative;
         min-height: 150px;
         min-width: 250px;
         max-width: 500px;
-        background-color: var(--white);
-        padding: 30px 0 30px 50px;
+        // background-color: var(--white);
+        // padding: 30px 0 30px 50px;
 
         z-index: 5;
         ${mq['md']} {
           font-size: 1.2em;
-          padding: 30px 0 30px 60px;
+          // padding: 30px 0 30px 60px;
         }
 
         ${mq['lg']} {
-          background-color: transparent;
+          // background-color: transparent;
           align-self: var(--pos);
-          padding: 30px 0 30px 70px;
+          // padding: 30px 0 30px 70px;
         }
       `}
     >
-      <span
+      <div
         css={css`
-          position: absolute;
-          left: 0;
-          top: 25px;
+          // position: absolute;
+          // left: 0;
+          // top: 25px;
 
           font-family: var(--font-sans);
           display: flex;
@@ -222,92 +222,101 @@ const Card = (props: CardsProps) => {
           0{props.sNo}
         </span>
         <span>09</span>
-      </span>
-      <h3
-        css={css`
-          font-family: var(--font-sans);
-          font-size: 1.25em;
-          margin-bottom: 15px;
-          font-weight: bold;
+      </div>
+      <div className="ms-4">
+        <h3
+          css={css`
+            font-family: var(--font-sans);
+            font-size: 1.25em;
+            margin-bottom: 15px;
+            font-weight: bold;
 
-          ${mq['lg']} {
-            margin-bottom: 20px;
-          }
-        `}
-      >
-        {props.title}
-      </h3>
-      <p
-        css={css`
-          margin-bottom: 25px;
-          font-size: 1em;
-          font-family: var(--font-text);
-        `}
-      >
-        {props.description}
-      </p>
-      <div
-        css={css`
-          border: 1px solid var(--d-blue);
-          display: inline-block;
-          background-color: var(--white);
-          /* border-radius: 12px; */
-          position: relative;
-          margin-top: 10px;
-
-          ${mq['lg']} {
-            /* border-radius: 40px; */
-            a {
-              padding: 15px 45px;
+            ${mq['lg']} {
+              margin-bottom: 20px;
             }
-            margin-top: 15px;
-          }
-        `}
-      >
-        <a
+          `}
+          className="text-gradient"
+        >
+          {props.title}
+        </h3>
+        <p
+          css={css`
+            margin-bottom: 25px;
+            font-size: 1em;
+            font-family: var(--font-text);
+          `}
+        >
+          {props.description}
+        </p>
+        {/* <div
+          css={css`
+            border: 1px solid var(--d-blue);
+            display: inline-block;
+            background-color: var(--white);
+            position: relative;
+            margin-top: 10px;
+            ${mq['lg']} {
+              a {
+                padding: 15px 45px;
+              }
+              margin-top: 15px;
+            }
+          `}
+        > */}
+        {/* <a
+            onClick={() => {
+              props.navigate(props.href)
+            }}
+            css={css`
+              font-family: var(--font-serif);
+              text-decoration: none;
+              color: var(--d-blue);
+              display: block;
+              cursor: pointer;
+              position: relative;
+              padding: 10px 30px;
+              width: 100%;
+              height: 100%;
+              z-index: 10;
+
+              transition: color ease-out 0.3s;
+
+              &:hover {
+                color: var(--white);
+
+                & + div {
+                  transform: scaleY(1);
+                  transform-origin: bottom center;
+                }
+              }
+            `}
+          >
+            Learn More
+          </a> */}
+
+        {/* <div
+            css={css`
+              width: 100%;
+              height: 100%;
+              border-radius: inherit;
+              top: 0;
+              position: absolute;
+              z-index: 1;
+              transform: scaleY(0);
+              transform-origin: top center;
+              background-color: var(--d-blue);
+              transition: transform cubic-bezier(0.19, 1, 0.22, 1) 0.6s;
+            `}
+          ></div>
+        </div> */}
+        <button
           onClick={() => {
             props.navigate(props.href)
           }}
-          css={css`
-            font-family: var(--font-serif);
-            text-decoration: none;
-            color: var(--d-blue);
-            display: block;
-            cursor: pointer;
-            position: relative;
-            padding: 10px 30px;
-            width: 100%;
-            height: 100%;
-            z-index: 10;
-
-            transition: color ease-out 0.3s;
-
-            &:hover {
-              color: var(--white);
-
-              & + div {
-                transform: scaleY(1);
-                transform-origin: bottom center;
-              }
-            }
-          `}
+          className="btn btn-gradient rounded-pill px-3 py-1 mt-3"
         >
-          Learn More
-        </a>
-        <div
-          css={css`
-            width: 100%;
-            height: 100%;
-            border-radius: inherit;
-            top: 0;
-            position: absolute;
-            z-index: 1;
-            transform: scaleY(0);
-            transform-origin: top center;
-            background-color: var(--d-blue);
-            transition: transform cubic-bezier(0.19, 1, 0.22, 1) 0.6s;
-          `}
-        ></div>
+          More Info!
+        </button>
       </div>
     </motion.div>
   )
@@ -323,12 +332,12 @@ const Events = () => {
       css={css`
         width: 100%;
         padding: 40px 50px 0 50px;
-        color: var(--black);
+        // color: var(--black);
 
         display: flex;
         flex-direction: column;
         align-items: center;
-        background-color: var(--white);
+        // background-color: var(--white);
       `}
     >
       <h3
@@ -365,8 +374,8 @@ const Events = () => {
           height: 4100px;
           justify-content: space-between;
 
-          width: 90%;
-          max-width: 1100px;
+          width: 100%;
+          max-width: 1500px;
 
           ${mq['lg']} {
             height: 5700px;

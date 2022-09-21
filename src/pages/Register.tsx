@@ -22,8 +22,8 @@ export const Register = () => {
     <>
       <section className="container d-flex justify-content-center align-items-center w-100 my-5">
         <Card
-          className="bg-dark all-text-white mt-5 rounded-curve shadow-white w-50 p-3 text-center"
-          style={{ minWidth: '18rem' }}
+          className="bg-dark all-text-white mt-5 rounded-curve shadow-white p-3 text-center z-10"
+          style={{ minWidth: '18rem', maxWidth: '80vw' }}
         >
           <CardContent>
             <h4 className="h4 text-gradient mb-4">
@@ -31,7 +31,7 @@ export const Register = () => {
               here and get your seats!
             </h4>
             <hr />
-            <form className="d-flex flex-column justify-content-center align-items-center">
+            {/* <form className="d-flex flex-column justify-content-center align-items-center">
               <div className="w-75">
                 <div className="my-4 text-start d-grid gap-2">
                   <label className="form-label">Register Number</label>
@@ -126,7 +126,16 @@ export const Register = () => {
                   Register!
                 </button>
               </div>
-            </form>
+            </form> */}
+
+            <iframe
+              src="https://docs.google.com/forms/d/e/1FAIpQLSew4B6yXGAZeZLBHRspzsp_QeeB1Nn4jr7VC6DD17_DAj1UbQ/viewform?embedded=true"
+              // width="500"
+              style={{ minHeight: '2150px' }}
+              className="w-100"
+            >
+              Loading…
+            </iframe>
           </CardContent>
         </Card>
       </section>

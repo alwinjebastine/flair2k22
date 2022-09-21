@@ -74,10 +74,13 @@ const Hero = () => {
         height: ${window.innerHeight}px;
 
         position: relative;
-        background-image: url('/Bg.png');
-        background-size: cover;
+        // background-image: url('/Bg.png');
+        // background-size: cover;
+        background-color: var(--black);
       `}
+      className="text-end vh-100"
     >
+      <img src="./Bg.png" alt="avatar" className="img-fluid vh-100" />
       <div
         css={css`
           position: absolute;

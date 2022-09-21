@@ -1,9 +1,25 @@
 import React from 'react'
+import { Routes, Route, useNavigate } from 'react-router-dom'
 import { events } from './Register'
+import EventInfo from './EventInfo'
 
 export const Events = () => {
   return (
-    <section className="container d-flex justify-content-center align-items-center my-5">
+    <Routes>
+      <Route path="/" element={<EventsBase />} />
+      <Route path="/:ename" element={<EventInfo />} />
+    </Routes>
+  )
+}
+
+export const EventsBase = () => {
+  const navigate = useNavigate()
+
+  return (
+    <section
+      className="container d-flex justify-content-center align-items-center my-5 card"
+      style={{ background: 'transparent' }}
+    >
       <div className="w-75 mt-5">
         <h2 className="h2 fw-bold">Events</h2>
         {events.map((event, i) => {
@@ -26,7 +42,10 @@ export const Events = () => {
                     in molestias aliquam eligendi atque.
                   </p>
                   <div className="text-md-end text-center">
-                    <button className="btn btn-gradient rounded-pill px-3 py-1 mt-3">
+                    <button
+                      className="btn btn-gradient rounded-pill px-3 py-1 mt-3"
+                      onClick={() => navigate('trade-your-theory')}
+                    >
                       More Info!
                     </button>
                   </div>
