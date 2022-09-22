@@ -8,7 +8,7 @@
 // event_name(dropdown)*,
 // planned to bring your own laptop*
 
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import { Checkbox, TextField, Autocomplete } from '@mui/material'
 import CheckBoxOutlineBlankIcon from '@mui/icons-material/CheckBoxOutlineBlank'
 import CheckBoxIcon from '@mui/icons-material/CheckBox'
@@ -21,7 +21,7 @@ const checkedIcon = <CheckBoxIcon fontSize="small" />
 
 export const Register = () => {
   const { p_name } = useParams()
-  const [link, setLink] = React.useState('')
+  const [link, setLink] = useState('')
 
   // useEffect(() => {
   //   setLink(
