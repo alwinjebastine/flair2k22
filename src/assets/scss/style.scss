@@ -128,3 +128,16 @@ a {
   -moz-box-shadow: inset 0 0 20px 10px rgba(0, 0, 0, 0.6);
   box-shadow: inset 0 0 20px 10px rgba(0, 0, 0, 0.6);
 }
+
+.card1{
+  animation: fadeInRight 1s ease-in-out;
+}
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(900px);
+  }
+  to {
+    opacity: 1;
+  }
+}
