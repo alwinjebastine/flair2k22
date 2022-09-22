@@ -5,6 +5,7 @@ import { motion } from 'framer-motion'
 import { useState, useEffect } from 'react'
 import mq from '../utils/mq'
 import NavList from './NavList'
+import logo from '../assets/images/Logo.png'
 
 const HamMenu = ({ closeMenu }: { closeMenu: () => void }) => {
   return (
@@ -270,7 +271,7 @@ const Header = () => {
         `}
       >
         <img
-          src="./logo.png"
+          src={logo}
           alt="logo"
           css={css`
             position: relative;

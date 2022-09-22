@@ -1,6 +1,6 @@
 import React from 'react'
 import { Routes, Route, useNavigate } from 'react-router-dom'
-import { events } from './Register'
+import events from '../utils/events'
 import EventInfo from './EventInfo'
 
 export const Events = () => {
@@ -35,16 +35,15 @@ export const EventsBase = () => {
                 />
                 <div className="align-self-start p-3">
                   <h3 className="h4 fw-bold text-gradient">{event.title}</h3>
-                  <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Voluptas architecto at provident voluptate ex rem, magnam
-                    dicta incidunt aut obcaecati quia! Repudiandae sunt vel eos
-                    in molestias aliquam eligendi atque.
-                  </p>
+                  <p>{event.description}</p>
                   <div className="text-md-end text-center">
                     <button
-                      className="btn btn-gradient rounded-pill px-3 py-1 mt-3"
-                      onClick={() => navigate('trade-your-theory')}
+                      className="btn btn-gradient rounded-pill px-3 py-1 mt-3 text-white"
+                      onClick={() =>
+                        navigate(
+                          `${event.title.toLowerCase().replace(/ /g, '-')}`
+                        )
+                      }
                     >
                       More Info!
                     </button>

@@ -8,16 +8,34 @@
 // event_name(dropdown)*,
 // planned to bring your own laptop*
 
+import React, { useEffect } from 'react'
 import { Checkbox, TextField, Autocomplete } from '@mui/material'
 import CheckBoxOutlineBlankIcon from '@mui/icons-material/CheckBoxOutlineBlank'
 import CheckBoxIcon from '@mui/icons-material/CheckBox'
 import Card from '@mui/material/Card'
 import CardContent from '@mui/material/CardContent'
+import { useParams } from 'react-router-dom'
 
 const icon = <CheckBoxOutlineBlankIcon fontSize="small" />
 const checkedIcon = <CheckBoxIcon fontSize="small" />
 
 export const Register = () => {
+  const { p_name } = useParams()
+  const [link, setLink] = React.useState('')
+
+  // useEffect(() => {
+  //   setLink(
+  //     events.find(
+  //       (event) => event.title.toLowerCase() === p_name?.replace(/-/g, ' ')
+  //       return()
+  //     ) as any
+  //   )
+  // }, [p_name])
+
+  // useEffect(() => {
+  //   console.log(link)
+  // }, [link])
+
   return (
     <>
       <section className="container d-flex justify-content-center align-items-center w-100 my-5">
@@ -143,13 +161,34 @@ export const Register = () => {
   )
 }
 export const events = [
-  { title: 'Trade your theory' },
-  { title: 'Glitch in the matrix' },
-  { title: 'Merge Conflicts' },
-  { title: 'Stuck between pixels' },
-  { title: 'Last or Lost' },
-  { title: 'Masters of the Alog Land' },
-  { title: "Murphys's Mirror" },
-  { title: 'house of the High Table' },
-  { title: 'Finger Stickin good' },
+  {
+    title: 'Trade your theory',
+    desc: "Hope ain't no Strategy, Luck ain't no Factor and Fear is not an option",
+  },
+  {
+    title: 'Glitch in the matrix',
+    desc: 'For there is nothing lost, that may be found, if sought.',
+  },
+  {
+    title: 'Merge Conflicts',
+    desc: 'Sometimes your whole life boils down to one insane move',
+  },
+  {
+    title: 'Stuck between pixels',
+    desc: 'Strive for progress, not perfection',
+  },
+  { title: 'Extricatech', desc: 'Strive for progress, not perfection' },
+  {
+    title: 'Masters of the Algo Land',
+    desc: 'Defy the leisure by cubic measure for the sake of stunning pleasure',
+  },
+  {
+    title: "Murphys's Mirror",
+    desc: "You're only given a little spark of madness. What's the point in hiding it?",
+  },
+  {
+    title: 'House of the High Table',
+    desc: 'All I ever wanted was a single thing worth fighting for',
+  },
+  { title: 'Finger Stickin good', desc: 'Release the kraken!' },
 ]

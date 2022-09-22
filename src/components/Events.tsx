@@ -173,7 +173,7 @@ const Card = (props: CardsProps) => {
       style={{
         ['--pos' as any]: props.sNo % 2 !== 0 ? 'flex-start' : 'flex-end',
       }}
-      className="bg-dark rounded-curve shadow-white p-5 d-flex justify-content-between align-items-start"
+      className="bg-dark rounded-curve shadow-white p-md-5 p-4 d-flex justify-content-center align-items-start"
       css={css`
         // position: relative;
         min-height: 150px;
@@ -209,25 +209,26 @@ const Card = (props: CardsProps) => {
         <span
           css={css`
             font-weight: bold;
+            margin-top: 10px;
             &:after {
               content: '';
               display: block;
               height: 1px;
               width: 100%;
               background-color: var(--black);
-              margin: 2px 0;
             }
           `}
         >
           0{props.sNo}
         </span>
+        <hr className="my-1" />
         <span>09</span>
       </div>
-      <div className="ms-4">
-        <h3
+      <div className="ms-md-4 ms-2">
+        <h1
           css={css`
             font-family: var(--font-sans);
-            font-size: 1.25em;
+            // font-size: 1.25em;
             margin-bottom: 15px;
             font-weight: bold;
 
@@ -235,15 +236,14 @@ const Card = (props: CardsProps) => {
               margin-bottom: 20px;
             }
           `}
-          className="text-gradient"
+          className="text-gradient fs-2"
         >
           {props.title}
-        </h3>
+        </h1>
         <p
           css={css`
-            margin-bottom: 25px;
-            font-size: 1em;
-            font-family: var(--font-text);
+            margin-bottom: 20px;
+            // font-family: var(--font-text);
           `}
         >
           {props.description}
@@ -313,7 +313,7 @@ const Card = (props: CardsProps) => {
           onClick={() => {
             props.navigate(props.href)
           }}
-          className="btn btn-gradient rounded-pill px-3 py-1 mt-3"
+          className="btn btn-gradient rounded-pill px-3 py-1 mt-3 text-white"
         >
           More Info!
         </button>
@@ -340,30 +340,29 @@ const Events = () => {
         // background-color: var(--white);
       `}
     >
-      <h3
+      <h2
         css={css`
           font-family: var(--font-sans);
-          font-size: 24px;
           display: inline-block;
 
           ${mq['lg']} {
-            font-size: 28px;
             margin-bottom: 20px;
             margin-top: 40px;
           }
 
-          &:after {
-            content: '';
-            display: block;
-            width: 100%;
-            height: 1px;
-            background-color: var(--orange);
-            margin-top: 5px;
-          }
+          // &:after {
+          //   content: '';
+          //   display: block;
+          //   width: 100%;
+          //   height: 1px;
+          //   background-color: var(--orange);
+          //   margin-top: 5px;
+          // }
         `}
+        className="h2 fw-bold"
       >
         Events
-      </h3>
+      </h2>
       <BgSvg controls1={controls1} controls2={controls2} />
       <div
         css={css`

@@ -7,10 +7,10 @@ export default [
     title: 'Events',
     link: '/events',
   },
-  {
-    title: 'Register',
-    link: '/register',
-  },
+  // {
+  //   title: 'Register',
+  //   link: '/register',
+  // },
   {
     title: 'About',
     link: '/about',

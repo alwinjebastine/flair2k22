@@ -10,7 +10,7 @@ const Footer = () => {
     >
       <hr />
       <div className="d-flex justify-content-center align-items-center mt-0 mb-4">
-        <div className="col-8 d-flex justify-content-between align-items-center">
+        <div className="col-8 d-md-flex justify-content-md-between justify-content-sm-center d-grid gap-3">
           <a href="/home">Home</a>
           <a href="/about">About</a>
           <a href="/events">Events</a>

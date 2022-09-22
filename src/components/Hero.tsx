@@ -31,6 +31,7 @@ const tagLineCss = css`
   font-family: var(--font-sans);
   color: var(--white);
   font-size: 40px;
+  text-align: left;
 `
 const ctaCss = css`
   font-family: var(--font-serif);
@@ -72,24 +73,29 @@ const Hero = () => {
       css={css`
         width: 100%;
         height: ${window.innerHeight}px;
-
-        position: relative;
-        // background-image: url('/Bg.png');
-        // background-size: cover;
+        // position: relative;
         background-color: var(--black);
       `}
       className="text-end vh-100"
     >
-      <img src="./Bg.png" alt="avatar" className="img-fluid vh-100" />
+      <div className="d-flex justify-content-end">
+        <img
+          src="./Bg.png"
+          alt="avatar"
+          className="img-fluid vh-100 card bg-transparent"
+        />
+      </div>
       <div
         css={css`
           position: absolute;
           left: 40px;
           bottom: 140px;
+          text-align: left;
         `}
       >
-        <h1 css={tagLineCss}>Unlock.</h1>
-        <h1 css={tagLineCss}>Within</h1>
+        <h1 css={tagLineCss}>
+          Unlock. <br /> Within
+        </h1>
         <a href="/register" css={ctaCss}>
           Register Now
         </a>

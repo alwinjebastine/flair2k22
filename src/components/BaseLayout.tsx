@@ -19,13 +19,13 @@ export const BaseLayout = ({ children }: Props) => {
         },
       },
       color: {
-        value: '#ffffff',
+        value: '#c2e5f0',
       },
       shape: {
         type: 'circle',
         stroke: {
-          width: 0,
-          color: '#ffffff',
+          width: 1,
+          color: '#5fa7c5',
         },
         polygon: {
           nb_sides: 3,
@@ -45,7 +45,7 @@ export const BaseLayout = ({ children }: Props) => {
         value: 2.5,
         random: true,
         anim: {
-          enable: false,
+          enable: true,
           speed: 4,
           size_min: 0.3,
           sync: false,
@@ -54,7 +54,7 @@ export const BaseLayout = ({ children }: Props) => {
       line_linked: {
         enable: false,
         distance: 150,
-        color: '#ffffff',
+        color: '#c2e5f0',
         opacity: 0.4,
         width: 1,
       },
