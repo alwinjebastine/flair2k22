@@ -9,32 +9,42 @@
 // planned to bring your own laptop*
 
 import React, { useEffect, useState } from 'react'
-import { Checkbox, TextField, Autocomplete } from '@mui/material'
-import CheckBoxOutlineBlankIcon from '@mui/icons-material/CheckBoxOutlineBlank'
-import CheckBoxIcon from '@mui/icons-material/CheckBox'
 import Card from '@mui/material/Card'
 import CardContent from '@mui/material/CardContent'
 import { useParams } from 'react-router-dom'
+import events from '../utils/events'
 
-const icon = <CheckBoxOutlineBlankIcon fontSize="small" />
-const checkedIcon = <CheckBoxIcon fontSize="small" />
+interface EDeets {
+  title: string
+  description: string
+  href: string
+  rules: string
+  register: string
+  image: any
+}
 
 export const Register = () => {
-  const { p_name } = useParams()
-  const [link, setLink] = useState('')
+  const { rname } = useParams()
+  const [eventDeets, setEventDeets] = useState<EDeets>({
+    title: '',
+    description: '',
+    href: '',
+    rules: '',
+    register: '',
+    image: '',
+  })
 
-  // useEffect(() => {
-  //   setLink(
-  //     events.find(
-  //       (event) => event.title.toLowerCase() === p_name?.replace(/-/g, ' ')
-  //       return()
-  //     ) as any
-  //   )
-  // }, [p_name])
+  useEffect(() => {
+    setEventDeets(
+      events.find(
+        (event) => event.title.toLowerCase() === rname?.replace(/-/g, ' ')
+      ) as any
+    )
+  }, [rname])
 
-  // useEffect(() => {
-  //   console.log(link)
-  // }, [link])
+  useEffect(() => {
+    console.log(eventDeets)
+  }, [eventDeets])
 
   return (
     <>
@@ -148,8 +158,9 @@ export const Register = () => {
 
             <iframe
               src="https://docs.google.com/forms/d/e/1FAIpQLSew4B6yXGAZeZLBHRspzsp_QeeB1Nn4jr7VC6DD17_DAj1UbQ/viewform?embedded=true"
+              // src={`${eventDeets?.register}/viewform/?embedded=true`}
               // width="500"
-              style={{ minHeight: '2150px' }}
+              style={{ minHeight: '2000px' }}
               className="w-100"
             >
               Loading…
@@ -160,35 +171,3 @@ export const Register = () => {
     </>
   )
 }
-export const events = [
-  {
-    title: 'Trade your theory',
-    desc: "Hope ain't no Strategy, Luck ain't no Factor and Fear is not an option",
-  },
-  {
-    title: 'Glitch in the matrix',
-    desc: 'For there is nothing lost, that may be found, if sought.',
-  },
-  {
-    title: 'Merge Conflicts',
-    desc: 'Sometimes your whole life boils down to one insane move',
-  },
-  {
-    title: 'Stuck between pixels',
-    desc: 'Strive for progress, not perfection',
-  },
-  { title: 'Extricatech', desc: 'Strive for progress, not perfection' },
-  {
-    title: 'Masters of the Algo Land',
-    desc: 'Defy the leisure by cubic measure for the sake of stunning pleasure',
-  },
-  {
-    title: "Murphys's Mirror",
-    desc: "You're only given a little spark of madness. What's the point in hiding it?",
-  },
-  {
-    title: 'House of the High Table',
-    desc: 'All I ever wanted was a single thing worth fighting for',
-  },
-  { title: 'Finger Stickin good', desc: 'Release the kraken!' },
-]
