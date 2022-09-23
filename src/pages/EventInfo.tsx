@@ -25,12 +25,18 @@ const EventInfo = () => {
     <section className="card bg-transparent">
       {eventDeets && (
         <div className="">
-          <img src={eventDeets.image} alt="bg" className="img-shadow vw-100" />
+          <div className="text-center gradd opacity-50" style={{ zIndex: '2' }}>
+            {/* <img
+              src={eventDeets.image}
+              alt="event"
+              className="img-fluid rounded-3"
+            /> */}
+          </div>
           <div className="container col-md-8 d-flex justify-content-center align-items-center">
             <div>
               <h1
-                className="text-capitalize text-gradient display-3 fw-bold mt-5"
-                // style={{ marginTop: '-40px', zIndex: '20' }}
+                className="text-capitalize text-center text-md-start text-gradient display-3 fw-bold mt-5"
+                // style={{ marginTop: '-40px', zIndex: '1000' }}
               >
                 {eventDeets.title}
               </h1>
@@ -38,7 +44,7 @@ const EventInfo = () => {
                 <div className="col-md-8 col-12">
                   <h5 className="h5">{eventDeets.description}</h5>
                   <h3 className="h3 my-3">Rules:</h3>
-                  <pre>{eventDeets.rules}</pre>
+                  <pre className="lh-base">{eventDeets.rules}</pre>
                   <div className="text-md-start text-center">
                     <button
                       className="btn btn-gradient rounded-pill px-3 py-1 mt-3 text-white"
@@ -60,12 +66,8 @@ const EventInfo = () => {
                     <h6 className="h6">tbd</h6>
                   </div>
                   <div>
-                    <h5 className="h5">TYPE:</h5>
-                    <h6 className="h6">Live</h6>
-                  </div>
-                  <div>
                     <h5 className="h5">WHERE:</h5>
-                    <h6 className="h6">At LICET</h6>
+                    <h6 className="h6">At G01</h6>
                   </div>
                 </div>
               </div>

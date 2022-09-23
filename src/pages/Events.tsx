@@ -28,7 +28,7 @@ export const EventsBase = () => {
               <hr />
               <div className="d-md-flex justify-content-center align-items-center">
                 <div className="container d-md-flex justify-content-start align-items-center">
-                  <div className="col-4">
+                  <div className="col-md-4">
                     <img
                       src="https://storage.googleapis.com/github-p-dex-921037.appspot.com/assets/dex365/resources/0d9ec20a-0905-4fe1-9578-86bf1c2a025b.png"
                       alt="event_1"
@@ -36,12 +36,24 @@ export const EventsBase = () => {
                       style={{ maxWidth: '300px' }}
                     />
                   </div>
-                  <div className="col-8 align-self-start p-3">
+                  <div className="col-md-8 align-self-start p-md-3 py-3">
                     <h3 className="h4 fw-bold text-gradient">{event.title}</h3>
                     <p>{event.description}</p>
-                    <div className="text-md-end text-center">
+                    <div className="text-md-end text-center mt-3">
                       <button
-                        className="btn btn-gradient rounded-pill px-3 mt-5 text-white"
+                        className="btn btn-gradient rounded-pill px-3 mt-md-5 text-white"
+                        onClick={() =>
+                          navigate(
+                            `/register/${event.title
+                              .toLowerCase()
+                              .replace(/ /g, '-')}`
+                          )
+                        }
+                      >
+                        Register!
+                      </button>
+                      <button
+                        className="btn btn-gradient rounded-pill px-3 mt-md-5 text-white ms-3"
                         onClick={() =>
                           navigate(
                             `${event.title.toLowerCase().replace(/ /g, '-')}`

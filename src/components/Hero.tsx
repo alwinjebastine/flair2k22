@@ -3,6 +3,9 @@
 import { css, jsx } from '@emotion/react'
 import { IconProps } from './Header'
 import { motion } from 'framer-motion'
+import Woodsprite from '../assets/images/Woodsprite.png'
+import Logo from '../assets/images/Logo.png'
+import mq from '../utils/mq'
 
 const DownArrow = ({ xCss, ...props }: IconProps) => (
   <motion.svg
@@ -28,10 +31,18 @@ const DownArrow = ({ xCss, ...props }: IconProps) => (
 )
 
 const tagLineCss = css`
-  font-family: var(--font-sans);
+  // font-family: var(--font-sans);
   color: var(--white);
-  font-size: 40px;
+  font-size: 26px;
+  line-height: 1.3em;
+  ${mq['lg']} {
+    line-height: 1em;
+    font-size: 40px;
+  }
   text-align: left;
+  position: relative;
+  max-width: 600px;
+  width: 100%;
 `
 const ctaCss = css`
   font-family: var(--font-serif);
@@ -78,35 +89,47 @@ const Hero = () => {
       `}
       className="text-end vh-100"
     >
-      <div className="d-flex justify-content-end">
+      <div className="d-flex justify-content-end align-items-center">
         <img
           src="./Bg.png"
           alt="avatar"
           className="img-fluid vh-100 card bg-transparent"
         />
       </div>
-      <div
+      <motion.div
+        initial={{
+          y: 100,
+          opacity: 0,
+        }}
+        whileInView={{
+          y: 0,
+          opacity: 1,
+          transition: {
+            duration: 2,
+          },
+        }}
+        viewport={{ once: true }}
         css={css`
           position: absolute;
-          left: 40px;
-          bottom: 140px;
           text-align: left;
+          overflow: hidden;
+
+          ${mq['lg']} {
+            left: 70px;
+            bottom: 140px;
+          }
+          left: 20px;
+          bottom: 70px;
         `}
       >
-        <h1 css={tagLineCss}>
-          Unlock. <br /> Within
-        </h1>
-        <a href="/register" css={ctaCss}>
+        <motion.h1 css={tagLineCss}>
+          A rendezvous beyond the horizon, a challenge for diligence, a chance
+          to exhibit your exorbitance
+        </motion.h1>
+        <motion.a href="/register" css={ctaCss}>
           Register Now
-        </a>
-      </div>
-      <DownArrow
-        xCss={css`
-          position: absolute;
-          bottom: 35px;
-          left: 50%;
-        `}
-      />
+        </motion.a>
+      </motion.div>
     </div>
   )
 }

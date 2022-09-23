@@ -3,6 +3,7 @@
 import { css, jsx } from '@emotion/react'
 import { motion, useAnimation, AnimationControls } from 'framer-motion'
 import { useNavigate, NavigateFunction } from 'react-router-dom'
+import Woodsprite from '../assets/images/Woodsprite.png'
 
 import events from '../utils/events'
 import mq from '../utils/mq'
@@ -381,6 +382,22 @@ const Events = () => {
           }
         `}
       >
+        <div className="sprite1">
+          <img
+            src={Woodsprite}
+            alt="avatar"
+            className="img-fluid"
+            style={{ width: '200px' }}
+          />
+        </div>
+        <div className="sprite2">
+          <img
+            src={Woodsprite}
+            alt="avatar"
+            className="img-fluid"
+            style={{ width: '200px' }}
+          />
+        </div>
         {events.map((event, index) => {
           return (
             <Card

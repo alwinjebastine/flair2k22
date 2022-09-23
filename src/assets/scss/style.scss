@@ -149,3 +149,46 @@ a {
     opacity: 1;
   }
 }
+
+.sprite1 {
+  position: absolute;
+  top: 200rem;
+  left: 300px;
+  transform: rotate(45deg);
+  -webkit-filter: drop-shadow(12px 12px 7px rgba(122, 220, 235, 0.5));
+  filter: drop-shadow(12px 12px 7px rgba(47, 188, 216, 0.5));
+  width: 500px;
+}
+.sprite2 {
+  position: absolute;
+  top: 80rem;
+  right: 100px;
+  transform: rotate(-45deg);
+  -webkit-filter: drop-shadow(12px 12px 7px rgba(122, 220, 235, 0.5));
+  filter: drop-shadow(12px 12px 7px rgba(47, 188, 216, 0.5));
+  width: 500px;
+}
+
+@media (max-width: 670px) {
+  .sprite1 {
+    display: none;
+  }
+  .sprite2 {
+    display: none;
+  }
+}
+
+.gradd {
+  height: 500px;
+  background-color: hsla(0, 0%, 0%, 1);
+  background-image: radial-gradient(
+      at 100% 0%,
+      hsla(12, 0%, 0%, 1) 0px,
+      transparent 50%
+    ),
+    radial-gradient(at 79% 27%, hsla(228, 93%, 49%, 1) 0px, transparent 50%),
+    radial-gradient(at 31% 66%, hsla(305, 93%, 71%, 1) 0px, transparent 50%),
+    radial-gradient(at 78% 73%, hsla(289, 58%, 40%, 1) 0px, transparent 50%),
+    radial-gradient(at 32% 32%, hsla(189, 100%, 56%, 1) 0px, transparent 50%),
+    radial-gradient(at 47% 49%, hsla(242, 100%, 70%, 1) 0px, transparent 50%);
+}

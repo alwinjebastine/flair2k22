@@ -15,7 +15,7 @@ export const About = () => {
               </h2>
             </div>
             <img src={licet} className="" />
-            <p>
+            <p className="fs-5 lh-base">
               The Loyola-ICAM (Institute Catholique d’Arts et Metiers) College
               of Engineering and Technology (LICET) is a Christian minority
               institution, founded in 2010 by the Jesuit Chennai Mission to form
@@ -37,7 +37,7 @@ export const About = () => {
               alt="it"
               className="img-fluid rounded-3 mb-5"
             />
-            <p>
+            <p className="fs-6 lh-base" style={{ textAlign: 'justify' }}>
               The department has vibrant and active faculty who are continually
               updating their knowledge and skills through numerous quality
               improvement initiatives. The students are provided with every
@@ -65,35 +65,42 @@ export const About = () => {
               that our students can be expert learners and provide solutions for
               the global community.
             </p>
-            <h4 className="h4 text-gradient my-3">Our Vision</h4>
-            <p>
-              To Build Proficient Information Technologists Through Moral,
-              Ethical And Technological Standards For The Societal Well-being.
-            </p>
-            <h4 className="h4 text-gradient my-3">Our Mission</h4>
-            <p>
-              <ul className="ul">
-                <li>
-                  To provide a practice oriented methodology with access to
-                  contemporary knowledge in Information Technology for the
-                  betterment of the society
-                </li>
-                <li>
-                  To prepare students for competent careers in Information
-                  Technology through innovation, team spirit, ethics and
-                  entrepreneurial skills in evolving technologies
-                </li>
-                <li>
-                  To integrate our department with quality organizations
-                  worldwide and promote industry institute interaction for
-                  symbiotic benefits
-                </li>
-                <li>
-                  To promote interdisciplinary research through innovation and
-                  reflective thinking
-                </li>
-              </ul>
-            </p>
+            <div className="d-flex justify-content-between align-items-start">
+              <div>
+                <h4 className="h4 text-gradient my-3">Our Vision</h4>
+                <p>
+                  To Build Proficient Information Technologists Through Moral,
+                  Ethical And Technological Standards For The Societal
+                  Well-being.
+                </p>
+              </div>
+              <div>
+                <h4 className="h4 text-gradient my-3">Our Mission</h4>
+                <p className="text-start">
+                  <ul className="ul">
+                    <li>
+                      To provide a practice oriented methodology with access to
+                      contemporary knowledge in Information Technology for the
+                      betterment of the society
+                    </li>
+                    <li>
+                      To prepare students for competent careers in Information
+                      Technology through innovation, team spirit, ethics and
+                      entrepreneurial skills in evolving technologies
+                    </li>
+                    <li>
+                      To integrate our department with quality organizations
+                      worldwide and promote industry institute interaction for
+                      symbiotic benefits
+                    </li>
+                    <li>
+                      To promote interdisciplinary research through innovation
+                      and reflective thinking
+                    </li>
+                  </ul>
+                </p>
+              </div>
+            </div>
           </div>
         </div>
         {/* </div> */}
