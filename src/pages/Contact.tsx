@@ -4,6 +4,7 @@ import AccordionDetails from '@mui/material/AccordionDetails';
 import Typography from '@mui/material/Typography';
 import AddIcon from '@mui/icons-material/Add';
 import licet from '../assets/images/licet.png'
+import faq from "../utils/faq";
 
 export const Contact = () => {
   return (
@@ -11,7 +12,7 @@ export const Contact = () => {
       <section className="container d-md-flex justify-content-center align-items-center w-100 my-5 card bg-transparent">
         <div className="my-5 bg-dark rounded-curve shadow-white p-md-5 p-4 mr-card">
           <div className='d-md-flex text-center'>
-          <img src={licet} className="img-fluid me-md-3" alt="licet" />
+          <img src={licet} className="me-md-3" style={{width:"14rem",height:"auto"}} alt="licet" />
           <div className='me-md-5'>
             <div className="h3 text-center text-gradient ms-2">CONTACT US!</div>
              <div className='d-grid gap-3 text-start mt-4 ms-2'>
@@ -23,40 +24,30 @@ export const Contact = () => {
            </div>
           </div>
         </div>
-      </section>
-      <div className='my-5 w-50 d-flex flex-column justify-content-center'>
-        <div className='h3 fw-bold text-gradient'>FREQUENTLY ASKED QUESTION</div>
-        <Accordion className='bg-dark1'>
-        <AccordionSummary
-          expandIcon={<AddIcon />}
-          aria-controls="panel1a-content"
-          id="panel1a-header"
-        >
-          <Typography>Accordion 1</Typography>
-        </AccordionSummary>
-        <AccordionDetails>
-          <Typography>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-            malesuada lacus ex, sit amet blandit leo lobortis eget.
-          </Typography>
-        </AccordionDetails>
-      </Accordion>
-      <Accordion>
-        <AccordionSummary
-          expandIcon={<AddIcon />}
-          aria-controls="panel2a-content"
-          id="panel2a-header"
-        >
-          <Typography>Accordion 2</Typography>
-        </AccordionSummary>
-        <AccordionDetails>
-          <Typography>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-            malesuada lacus ex, sit amet blandit leo lobortis eget.
-          </Typography>
-        </AccordionDetails>
-      </Accordion>
+        <div className='my-5 w-75 d-flex flex-column justify-content-center'>
+        <div className='h3 fw-bold text-gradient my-5'>FREQUENTLY ASKED QUESTION</div>
+        {faq &&
+          faq.map((faqs,index) => (
+            <div key={index}>
+              <Accordion className='bg-dark1'>
+                <AccordionSummary
+                  expandIcon={<AddIcon style={{color:"white"}}/>}
+                  aria-controls="panel1a-content"
+                  id="panel1a-header"
+                >
+                  <Typography>{faqs.question}</Typography>
+                </AccordionSummary>
+                <AccordionDetails>
+                  <Typography>
+                    {faqs.answer}
+                  </Typography>
+                </AccordionDetails>
+              </Accordion>
+            </div>
+            
+            ))}
       </div>
+      </section>
     </>
   )
 }
