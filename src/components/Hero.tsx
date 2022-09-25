@@ -6,6 +6,8 @@ import { motion } from 'framer-motion'
 import Woodsprite from '../assets/images/Woodsprite.png'
 import Logo from '../assets/images/Logo.png'
 import mq from '../utils/mq'
+import React from 'react'
+import Events from '../components/Events'
 
 const DownArrow = ({ xCss, ...props }: IconProps) => (
   <motion.svg
@@ -80,57 +82,64 @@ const ctaCss = css`
 `
 const Hero = () => {
   return (
-    <div
-      css={css`
-        width: 100%;
-        height: ${window.innerHeight}px;
-        // position: relative;
-        background-color: var(--black);
-      `}
-      className="text-end vh-100"
-    >
-      <div className="d-flex justify-content-end align-items-center">
-        <img
-          src="./Bg.png"
-          alt="avatar"
-          className="img-fluid vh-100 card bg-transparent"
-        />
-      </div>
-      <motion.div
-        initial={{
-          y: 100,
-          opacity: 0,
-        }}
-        whileInView={{
-          y: 0,
-          opacity: 1,
-          transition: {
-            duration: 2,
-          },
-        }}
-        viewport={{ once: true }}
+    <React.Fragment>
+      <div
         css={css`
-          position: absolute;
-          text-align: left;
-          overflow: hidden;
-
-          ${mq['lg']} {
-            left: 70px;
-            bottom: 140px;
-          }
-          left: 20px;
-          bottom: 70px;
+          // width: 100%;
+          // height: ${window.innerHeight}px;
+          // position: relative;
+          background-color: var(--black);
         `}
+        className="vh-100 w-100"
       >
-        <motion.h1 css={tagLineCss}>
-          A rendezvous beyond the horizon, a challenge for diligence, a chance
-          to exhibit your exorbitance
-        </motion.h1>
-        <motion.a href="/register" css={ctaCss}>
-          Register Now
-        </motion.a>
-      </motion.div>
-    </div>
+        <div className="d-flex justify-content-end align-items-center">
+          <img
+            src="./Bg.png"
+            alt="avatar"
+            className="img-fluid vh-100 card bg-transparent"
+          />
+        </div>
+        <motion.div
+          initial={{
+            y: 100,
+            opacity: 0,
+          }}
+          whileInView={{
+            y: 0,
+            opacity: 1,
+            transition: {
+              duration: 2,
+            },
+          }}
+          viewport={{ once: true }}
+          css={css`
+            position: absolute;
+            text-align: left;
+            overflow: hidden;
+
+            ${mq['lg']} {
+              left: 70px;
+              bottom: 140px;
+            }
+            left: 20px;
+            bottom: 70px;
+          `}
+        >
+          <motion.h1 css={tagLineCss}>
+            A rendezvous beyond the horizon!
+          </motion.h1>
+          <motion.a href="#event-h" css={ctaCss}>
+            Register Now
+          </motion.a>
+        </motion.div>
+      </div>
+      <div
+        className="d-flex justify-content-center align-items-center"
+        style={{ marginTop: '-50px' }}
+      >
+        <DownArrow />
+      </div>
+    </React.Fragment>
   )
 }
 

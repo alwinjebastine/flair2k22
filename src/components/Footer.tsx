@@ -14,10 +14,13 @@ const Footer = () => {
           <a href="/home">Home</a>
           <a href="/about">About</a>
           <a href="/events">Events</a>
-          <a href="">Need Help?</a>
+          <a href="/contact">Need Help?</a>
         </div>
       </div>
       <h6>©2022 LICET. All Rights Reserved.</h6>
+      <h6 className="mt-3">
+        Coded with <del>love</del> keyboard by 3 Dev-idiots
+      </h6>
     </section>
   )
 }
