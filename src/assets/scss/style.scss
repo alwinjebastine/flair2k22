@@ -11,12 +11,28 @@ $grey: #979ea5;
 $bunker: #0d1117;
 $violet: #fc00ff;
 $cyan: #00dcff;
+$deep-sky-blue: #00c9ff;
 $black: #000;
 
 // base styles
 html {
   font-size: 16px;
   font-family: var(--font-text);
+}
+
+@font-face {
+  font-family: 'Torkus';
+  src: url('../fonts/TorukscRegular');
+}
+
+.text-deep-sky-blue {
+  color: $deep-sky-blue;
+}
+
+.head-title {
+  font-family: 'Torkus';
+  color: $white;
+  text-align: center;
 }
 
 pre {
