@@ -38,7 +38,7 @@ export const EventsBase = () => {
                   </div>
                   <div className="col-md-8 align-self-start p-md-3 py-3">
                     <h3 className="h4 fw-bold text-gradient">{event.title}</h3>
-                    <p>{event.description}</p>
+                    <p className='lh-base'>{event.description}</p>
                     <div className="text-md-end text-center mt-3">
                       <button
                         className="btn btn-gradient rounded-pill px-3 mt-md-5 text-white"

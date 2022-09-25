@@ -5,6 +5,7 @@ import { IconProps } from './Header'
 import { motion } from 'framer-motion'
 import Woodsprite from '../assets/images/Woodsprite.png'
 import Logo from '../assets/images/Logo.png'
+import licet from '../assets/images/licet.png'
 import mq from '../utils/mq'
 import React from 'react'
 import Events from '../components/Events'
@@ -125,6 +126,7 @@ const Hero = () => {
             bottom: 70px;
           `}
         >
+          <div className='me-5 d-md-flex'><img src={licet} className="img-fluid" alt="licet" /><div className='h2 mt-md-5 text-gradient lh-base'>Department of Information Technology <br/>Presents you</div></div>
           <motion.h1 css={tagLineCss}>
             A rendezvous beyond the horizon!
           </motion.h1>

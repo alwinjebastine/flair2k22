@@ -10,6 +10,28 @@ import stuck_title from '../assets/images/Stuck_Between_Pixels.png'
 
 export default [
   {
+    title: 'Trade your theory',
+    description:
+      'A competition to enhance your ability in the art of academic writing or making papers your projects or research works and presenting it in front of the juries',
+    href: '/events/trade-your-theory',
+    rules: `
+    •Registration closes by 3rd Oct’22.
+    •Abstract to be submitted by 6th Oct’22.
+    •Shortlisted teams must present on 8th Oct’22 (9.00am - 11.00am)
+    •The top 3 papers will be selected as winners.
+    •The paper is to be attached through mail (Subject should be TITLE of the Paper).
+    •The mail must contain :-
+      Name of authors
+      College Names
+      Departments
+      Author’s Phone Numbers and Email Addresses.
+    `,
+    register: 'https://forms.gle/EbfN8SeJdZvVCJk87',
+    image: trade_title,
+    when:'8th OCT 09:00-10:50 AM',
+    where:'A21',
+  },
+  {
     title: 'Finger stickin’ good',
     description:
       'Who says typing can’t be fun? Play a round of monkey typing and you’ll be hooked! The game is good for picking up typing techniques and speed.',
@@ -17,7 +39,7 @@ export default [
     rules: `
     GENERAL:
     It is an individual event.
-      Event will be conducted  in three rounds.
+    Event will be conducted  in three rounds.
     
     ROUND 1: 
     The typing duration would be for 20 seconds (per person)
@@ -36,6 +58,8 @@ export default [
     `,
     register: 'https://forms.gle/usxNPnGDCoN9VDCE6',
     image: finger_title,
+    when:'8th OCT 02:00-03:30 PM',
+    where:'J14',
   },
   {
     title: 'Masters of Algo Land',
@@ -53,6 +77,8 @@ export default [
     `,
     register: 'https://forms.gle/YCYrBhjw2ay4ygwJ6',
     image: masters_title,
+    when:'8th OCT 01:30-02:30 PM',
+    where:'H23',
   },
   {
     title: 'Glitch in the matrix',
@@ -75,13 +101,15 @@ export default [
     `,
     register: 'https://forms.gle/aph8QrumtZCF3WHy6',
     image: glitch_title,
+    when:'8th OCT 10:30 AM -12:30 PM',
+    where:'H23',
   },
 
   {
     title: "Murphy's Mirror",
     description:
       'Are you good at visualizing and acting? In the first round, connect the given visuals to form a technical term. Second round is an exciting version of dumb-charades in which the team has to enact the given technical terms',
-    href: '/events/murphys-mirror',
+    href: "/events/murphy's-mirror",
     rules: `
     General:
       1. Gadget usage is restricted.
@@ -98,6 +126,8 @@ export default [
   `,
     register: 'https://forms.gle/YCYrBhjw2ay4ygwJ6',
     image: murphy_title,
+    when:'8th OCT 01:30-03:00 PM',
+    where:'A21',
   },
 
   {
@@ -119,6 +149,8 @@ export default [
     `,
     register: 'https://forms.gle/cT9oFsvWwCuQsghA8',
     image: house_title,
+    when:'8th OCT 01:30-03:30 PM',
+    where:'A22',
   },
   {
     title: 'Merge conflicts',
@@ -138,26 +170,8 @@ export default [
     `,
     register: 'https://forms.gle/uxsDi64zWKtuBLuD6',
     image: merge_title,
-  },
-  {
-    title: 'Trade your theory',
-    description:
-      'A competition to enhance your ability in the art of academic writing or making papers your projects or research works and presenting it in front of the juries',
-    href: '/events/trade-your-theory',
-    rules: `
-    •Registration closes by 3rd Oct’22.
-    •Abstract to be submitted by 6th Oct’22.
-    •Shortlisted teams must present on 8th Oct’22 (9.00am - 11.00am)
-    •The top 3 papers will be selected as winners.
-    •The paper is to be attached through mail (Subject should be TITLE of the Paper).
-    •The mail must contain :-
-      Name of authors
-      College Names
-      Departments
-      Author’s Phone Numbers and Email Addresses.
-    `,
-    register: 'https://forms.gle/EbfN8SeJdZvVCJk87',
-    image: trade_title,
+    when:'8th OCT 01:40-03:00 PM',
+    where:'A21',
   },
   {
     title: 'Stuck between pixels',
@@ -179,6 +193,8 @@ export default [
     `,
     register: 'https://forms.gle/VFsXqU1tdfbbGcsb9',
     image: stuck_title,
+    when:'8th OCT 10:30 AM -12:30 PM',
+    where:'J14',
   },
   {
     title: 'Extricatech',
@@ -208,5 +224,7 @@ export default [
       `,
     register: 'https://forms.gle/cT9oFsvWwCuQsghA8',
     image: extracatech_title,
+    when:'8th OCT 01:30-3:00 PM',
+    where:'I31',
   },
 ]

@@ -65,36 +65,36 @@ export const About = () => {
               that our students can be expert learners and provide solutions for
               the global community.
             </p>
-            <div className="d-flex justify-content-between align-items-start">
+            <div className="d-md-flex justify-content-between align-items-start my-3">
               <div>
                 <h4 className="h4 text-gradient my-3">Our Vision</h4>
-                <p>
+                <p className='lh-base text-start'>
                   To Build Proficient Information Technologists Through Moral,
                   Ethical And Technological Standards For The Societal
                   Well-being.
                 </p>
               </div>
-              <div>
+              <div className='ms-md-3'>
                 <h4 className="h4 text-gradient my-3">Our Mission</h4>
-                <p className="text-start">
+                <p className="text-start lh-base">
                   <ul className="ul">
                     <li>
-                      To provide a practice oriented methodology with access to
+                      • To provide a practice oriented methodology with access to
                       contemporary knowledge in Information Technology for the
                       betterment of the society
                     </li>
                     <li>
-                      To prepare students for competent careers in Information
+                      • To prepare students for competent careers in Information
                       Technology through innovation, team spirit, ethics and
                       entrepreneurial skills in evolving technologies
                     </li>
                     <li>
-                      To integrate our department with quality organizations
+                      • To integrate our department with quality organizations
                       worldwide and promote industry institute interaction for
                       symbiotic benefits
                     </li>
                     <li>
-                      To promote interdisciplinary research through innovation
+                      • To promote interdisciplinary research through innovation
                       and reflective thinking
                     </li>
                   </ul>
