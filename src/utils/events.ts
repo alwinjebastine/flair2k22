@@ -1,12 +1,12 @@
 import trade_title from '../assets/images/Trade_Your_Theory.jpg'
 import murphy_title from '../assets/images/Murphys_Mirror.png'
 import extracatech_title from '../assets/images/Extricatech.jpg'
-import finger_title from '../assets/images/Finger_Stickin_Good.png'
+import finger_title from '../assets/images/Finger_Stickin_Good.jpg'
 import glitch_title from '../assets/images/Glitch_In_The_Matrix.jpg'
 import house_title from '../assets/images/House_Of_High_Table.jpg'
-import masters_title from '../assets/images/Masters_Of_Algo_Land.png'
+import masters_title from '../assets/images/Masters_Of_Algo_Land.jpg'
 import merge_title from '../assets/images/Merge_Conflicts.png'
-import stuck_title from '../assets/images/Stuck_Between_Pixels.png'
+import stuck_title from '../assets/images/Stuck_Between_Pixels.jpg'
 
 export default [
   {
