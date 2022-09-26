@@ -3,12 +3,9 @@
 import { css, jsx } from '@emotion/react'
 import { IconProps } from './Header'
 import { motion } from 'framer-motion'
-import Woodsprite from '../assets/images/Woodsprite.png'
-import Logo from '../assets/images/Logo.png'
 import licet from '../assets/images/licet.png'
 import mq from '../utils/mq'
 import React from 'react'
-import Events from '../components/Events'
 
 const DownArrow = ({ xCss, ...props }: IconProps) => (
   <motion.svg
@@ -86,9 +83,6 @@ const Hero = () => {
     <React.Fragment>
       <div
         css={css`
-          // width: 100%;
-          // height: ${window.innerHeight}px;
-          // position: relative;
           background-color: var(--black);
         `}
         className="vh-100 w-100"
@@ -116,22 +110,35 @@ const Hero = () => {
           css={css`
             position: absolute;
             text-align: left;
-            overflow: hidden;
 
             ${mq['lg']} {
               left: 70px;
-              bottom: 140px;
+              bottom: 160px;
             }
             left: 20px;
-            bottom: 70px;
+            bottom: 100px;
           `}
         >
-          <div className='me-5 d-md-flex'><img src={licet} className="img-fluid" alt="licet" /><div className='h2 mt-md-5 text-gradient lh-base'>Department of Information Technology <br/>Presents you</div></div>
-          <motion.h1 css={tagLineCss}>
+          <div className="d-md-flex justify-content-center align-items-center">
+            <img
+              src={licet}
+              className="img-fluid"
+              alt="licet"
+              style={{ width: '150px', height: '150px' }}
+            />
+            <h2 className="h2 mb-0 ms-md-2 text-gradient lh-base">
+              Department of Information Technology <br />
+              presents you...
+            </h2>
+          </div>
+          <motion.h1 css={tagLineCss} className="mt-md-5 mt-3 mb-md-4 mb-3">
             A rendezvous beyond the horizon!
           </motion.h1>
-          <motion.a href="#event-h" css={ctaCss}>
-            Register Now
+          <motion.a
+            href="#events"
+            className="h6 btn-gradient rounded-pill p-2 px-3 text-dark fw-bold"
+          >
+            Wanna peek?
           </motion.a>
         </motion.div>
       </div>
