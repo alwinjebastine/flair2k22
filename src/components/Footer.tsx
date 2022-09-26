@@ -6,7 +6,7 @@ const Footer = () => {
         <div className="col-8 d-md-flex justify-content-md-between justify-content-sm-center d-grid gap-3">
           <a href="/home">Home</a>
           <a href="/about">About</a>
-          <a href="/events">Events</a>
+          <a href="/#events">Events</a>
           <a href="/contact">Need Help?</a>
         </div>
       </div>
