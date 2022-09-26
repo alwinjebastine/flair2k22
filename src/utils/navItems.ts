@@ -5,7 +5,7 @@ export default [
   },
   {
     title: 'Events',
-    link: '/events',
+    link: '/#events',
   },
   {
     title: 'About',

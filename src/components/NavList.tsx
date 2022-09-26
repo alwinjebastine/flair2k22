@@ -10,8 +10,13 @@ const NavList = ({ closeMenu }: { closeMenu?: () => void }) => {
           <a
             onClick={() => {
               window.getSelection()?.removeAllRanges()
+              item.title === 'Events' && navigate('/')
               setTimeout(() => {
-                navigate(item.link)
+                if (item.title === 'Events') {
+                  window.location.href = item.link
+                } else {
+                  navigate(item.link)
+                }
                 closeMenu && closeMenu()
               }, 100)
             }}
