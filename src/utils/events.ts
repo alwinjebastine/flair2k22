@@ -26,10 +26,11 @@ export default [
       Departments
       Author’s Phone Numbers and Email Addresses.
     `,
-    register: 'https://forms.gle/EbfN8SeJdZvVCJk87',
+    register:
+      'https://docs.google.com/forms/d/e/1FAIpQLSfqC0QakAiKkQz27BxHNmmelcTidzpzWpIKTCNzSwJZN4ecvg',
     image: trade_title,
-    when:'8th OCT 09:00-10:50 AM',
-    where:'A21',
+    when: '8th OCT 09:00-10:50 AM',
+    where: 'A21',
   },
   {
     title: 'Finger stickin’ good',
@@ -56,10 +57,11 @@ export default [
     EVALUATION FOR EACH ROUND: 
     The cumulative of wpm(words per minute), accuracy and consistency will decide the escalation of students into the next rounds. 
     `,
-    register: 'https://forms.gle/usxNPnGDCoN9VDCE6',
+    register:
+      'https://docs.google.com/forms/d/e/1FAIpQLSct7iOIsoBb1-4lihGPTkjDYuJgWAHNQg8lu6UzmgYZ8C-GYg',
     image: finger_title,
-    when:'8th OCT 02:00-03:30 PM',
-    where:'J14',
+    when: '8th OCT 02:00-03:30 PM',
+    where: 'J14',
   },
   {
     title: 'Masters of Algo Land',
@@ -75,10 +77,11 @@ export default [
     • Electronic gadgets are prohibited.
     • The judge's decision will be final.
     `,
-    register: 'https://forms.gle/YCYrBhjw2ay4ygwJ6',
+    register:
+      'https://docs.google.com/forms/d/e/1FAIpQLScL8szWgn6pXK-vpVSx91glu_llpWya5G4N91p3eyIzHe-HTQ',
     image: masters_title,
-    when:'8th OCT 01:30-02:30 PM',
-    where:'H23',
+    when: '8th OCT 01:30-02:30 PM',
+    where: 'H23',
   },
   {
     title: 'Glitch in the matrix',
@@ -99,10 +102,11 @@ export default [
     • Breaks will not be permitted after logging in.
     • The judge's decision will be final.
     `,
-    register: 'https://forms.gle/aph8QrumtZCF3WHy6',
+    register:
+      'https://docs.google.com/forms/d/e/1FAIpQLSc-fiYVgpgCpgnrZ1G0XMa9PpEgi9OhS2yE9oc-8rnOh1UaRg',
     image: glitch_title,
-    when:'8th OCT 10:30 AM -12:30 PM',
-    where:'H23',
+    when: '8th OCT 10:30 AM -12:30 PM',
+    where: 'H23',
   },
 
   {
@@ -124,10 +128,11 @@ export default [
       1. No talking and mouthing words while acting.
       2. Timer- You have only 60 seconds to act out your words or phrases and You have to lock the answer within the given time.
   `,
-    register: 'https://forms.gle/YCYrBhjw2ay4ygwJ6',
+    register:
+      'https://docs.google.com/forms/d/e/1FAIpQLSfQ4runspbWD0bSE9ccCRfQ0sRwSvGjIovmtf8_A7mw1Aj-WA',
     image: murphy_title,
-    when:'8th OCT 01:30-03:00 PM',
-    where:'A21',
+    when: '8th OCT 01:30-03:00 PM',
+    where: 'A21',
   },
 
   {
@@ -147,10 +152,11 @@ export default [
     • Team - Who is on your team?
     • Teams must include at least 2 active members
     `,
-    register: 'https://forms.gle/cT9oFsvWwCuQsghA8',
+    register:
+      'https://docs.google.com/forms/d/e/1FAIpQLSfKn7dMRppuRkaO6Qb5gfJb21hnBBsq4ErYIz8TiG6ULO7WTg',
     image: house_title,
-    when:'8th OCT 01:30-03:30 PM',
-    where:'A22',
+    when: '8th OCT 01:30-03:30 PM',
+    where: 'A22',
   },
   {
     title: 'Merge conflicts',
@@ -168,10 +174,11 @@ export default [
     • The speaker of the ‘negative’ team will present his/her ideas and opinions.Their speech should not be more than three minutes.
     • The ‘affirmative’ team will ask questions and the ‘negative’ team answers them.All members should be involved in asking and answering questions.
     `,
-    register: 'https://forms.gle/uxsDi64zWKtuBLuD6',
+    register:
+      'https://docs.google.com/forms/d/e/1FAIpQLSewC0CgDxpLIdnuebY4vNZNArHYOTfWAbb666dmYjtqy8iyIg',
     image: merge_title,
-    when:'8th OCT 01:40-03:00 PM',
-    where:'A21',
+    when: '8th OCT 01:40-03:00 PM',
+    where: 'A21',
   },
   {
     title: 'Stuck between pixels',
@@ -191,10 +198,11 @@ export default [
     • The submission must also contain the team members, college names, department and contact of the representative.
     • If required the participants can bring the necessary things to finish the challenge on the day of the event before the stipulated time.
     `,
-    register: 'https://forms.gle/VFsXqU1tdfbbGcsb9',
+    register:
+      'https://docs.google.com/forms/d/e/1FAIpQLSdnokMNtV6xDWoquj4XXC77h7RWppdl94IR7VCXksoXdE7MmQ',
     image: stuck_title,
-    when:'8th OCT 10:30 AM -12:30 PM',
-    where:'J14',
+    when: '8th OCT 10:30 AM -12:30 PM',
+    where: 'J14',
   },
   {
     title: 'Extricatech',
@@ -222,9 +230,10 @@ export default [
       • Delivery of content, cohesion, no of words used, technical relevance in the story is expected.
       • The judge's decision will be final.
       `,
-    register: 'https://forms.gle/cT9oFsvWwCuQsghA8',
+    register:
+      'https://docs.google.com/forms/d/e/1FAIpQLSd4aT6U4XiP4NwVsPUo3ncPjYBNovWq8oMud5TUZXzDz6WXXw',
     image: extracatech_title,
-    when:'8th OCT 01:30-3:00 PM',
-    where:'I31',
+    when: '8th OCT 01:30-3:00 PM',
+    where: 'I31',
   },
 ]
