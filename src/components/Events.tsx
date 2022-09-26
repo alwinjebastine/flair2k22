@@ -109,6 +109,7 @@ type CardsProps = {
   title: string
   description: string
   href: string
+  register: string
   navigate: NavigateFunction
   controls1: AnimationControls
   controls2: AnimationControls
@@ -315,6 +316,14 @@ const Card = (props: CardsProps) => {
         >
           More Info!
         </button>
+        <button
+          onClick={() => {
+            props.navigate(props.register)
+          }}
+          className="btn btn-gradient rounded-pill px-3 py-1 mt-3 text-white ms-3"
+        >
+          Register!
+        </button>
       </div>
     </motion.div>
   )
@@ -400,6 +409,9 @@ const Events = () => {
               title={event.title}
               description={event.description}
               href={event.href}
+              register={`/register/${event.title
+                .toLowerCase()
+                .replace(/ /g, '-')}`}
               navigate={navigate}
               className={
                 index === 4
