@@ -33,7 +33,7 @@ export default [
     where: 'A21',
   },
   {
-    title: 'Finger stickin’ good',
+    title: 'Finger stickin good',
     description:
       'Who says typing can’t be fun? Play a round of monkey typing and you’ll be hooked! The game is good for picking up typing techniques and speed.',
     href: '/events/finger-stickin-good',
