@@ -127,7 +127,7 @@ export const Contact = () => {
                     <h1 className="h6">{faqs.question}</h1>
                   </AccordionSummary>
                   <AccordionDetails>
-                    <p className="p fw-norma text-muted">{faqs.answer}</p>
+                    <p className="p fw-norma text-muted lh-base">{faqs.answer}</p>
                   </AccordionDetails>
                 </Accordion>
                 <hr />
