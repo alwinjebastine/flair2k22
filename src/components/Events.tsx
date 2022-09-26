@@ -370,19 +370,14 @@ const Events = () => {
       <BgSvg controls1={controls1} controls2={controls2} />
       <div
         css={css`
-          margin-top: 155px;
+          margin-top: -8rem;
           display: flex;
           flex-direction: column;
           align-items: center;
-          height: 4100px;
-          justify-content: space-between;
-
+          height: 5800px;
+          justify-content: space-evenly;
           width: 100%;
           max-width: 1500px;
-
-          ${mq['lg']} {
-            height: 5700px;
-          }
         `}
       >
         <div className="sprite1">
@@ -412,7 +407,17 @@ const Events = () => {
               description={event.description}
               href={event.href}
               navigate={navigate}
-              className="nice"
+              className={
+                index === 4
+                  ? 'mt-custom-1'
+                  : index === 5
+                  ? 'mt-5'
+                  : index === 6
+                  ? 'mt-5'
+                  : index === 7
+                  ? 'mt-custom-2'
+                  : ''
+              }
             />
           )
         })}
