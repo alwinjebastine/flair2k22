@@ -169,7 +169,7 @@ const Card = (props: CardsProps) => {
       viewport={{ once: true }}
       onViewportEnter={svgDraw}
       style={{
-        ['--pos' as any]: props.sNo % 2 !== 0 ? 'flex-start' : 'flex-end',
+        ['--pos' as string]: props.sNo % 2 !== 0 ? 'flex-start' : 'flex-end',
       }}
       className={`bg-dark rounded-curve shadow-white p-md-5 p-4 d-flex justify-content-center align-items-start mr-card ${props.className}`}
       css={css`

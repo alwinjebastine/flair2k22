@@ -43,41 +43,42 @@ const tagLineCss = css`
   position: relative;
   max-width: 600px;
   width: 100%;
+  //
 `
-const ctaCss = css`
-  font-family: var(--font-serif);
-  color: var(--l-blue);
-  text-decoration: none;
-  cursor: pointer;
-  font-weight: 100;
+// const ctaCss = css`
+//   font-family: var(--font-serif);
+//   color: var(--l-blue);
+//   text-decoration: none;
+//   cursor: pointer;
+//   font-weight: 100;
 
-  display: inline-block;
-  position: relative;
-  margin-top: 20px;
-  font-size: 28px;
+//   display: inline-block;
+//   position: relative;
+//   margin-top: 20px;
+//   font-size: 28px;
 
-  &::after {
-    content: '';
-    display: block;
-    position: absolute;
-    width: 100%;
-    margin-top: 4px;
-    height: 1px;
-    background-color: var(--l-blue);
+//   &::after {
+//     content: '';
+//     display: block;
+//     position: absolute;
+//     width: 100%;
+//     margin-top: 4px;
+//     height: 1px;
+//     background-color: var(--l-blue);
 
-    transform: scaleX(0);
-    transform-origin: right center;
-    transition: transform cubic-bezier(0.19, 1, 0.22, 1) 0.6s;
-  }
+//     transform: scaleX(0);
+//     transform-origin: right center;
+//     transition: transform cubic-bezier(0.19, 1, 0.22, 1) 0.6s;
+//   }
 
-  &:hover {
-    color: var(--white);
-  }
-  &:hover::after {
-    transform: scaleX(1);
-    transform-origin: left center;
-  }
-`
+//   &:hover {
+//     color: var(--white);
+//   }
+//   &:hover::after {
+//     transform: scaleX(1);
+//     transform-origin: left center;
+//   }
+// `
 const Hero = () => {
   return (
     <React.Fragment>
