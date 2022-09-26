@@ -1,6 +1,6 @@
 /** @jsxRuntime classic */
 /** @jsx jsx */
-import { css, jsx } from '@emotion/react'
+import { css, jsx, SerializedStyles } from '@emotion/react'
 import { motion, useAnimation, AnimationControls } from 'framer-motion'
 import { useNavigate, NavigateFunction } from 'react-router-dom'
 // import Woodsprite from '../assets/images/Woodsprite.png'
@@ -113,7 +113,6 @@ type CardsProps = {
   navigate: NavigateFunction
   controls1: AnimationControls
   controls2: AnimationControls
-  className: string
 }
 const Card = (props: CardsProps) => {
   const animate = (path: number, dur: number) => {
@@ -180,13 +179,26 @@ const Card = (props: CardsProps) => {
       onViewportEnter={svgDraw}
       style={{
         ['--pos' as string]: props.sNo % 2 !== 0 ? 'flex-start' : 'flex-end',
+        ['--top' as string]:
+          props.sNo === 8
+            ? '60px'
+            : props.sNo === 6
+            ? '-150px'
+            : props.sNo === 5
+            ? '-80px'
+            : props.sNo === 4
+            ? '-50px'
+            : '0',
       }}
-      className={`bg-dark rounded-curve shadow-white p-md-5 p-4 d-flex justify-content-center align-items-start mr-card ${props.className}`}
+      className={`bg-dark rounded-curve shadow-white p-md-5 p-4 d-flex justify-content-center align-items-start mr-card`}
       css={css`
         min-height: 150px;
         min-width: 250px;
         max-width: 500px;
         z-index: 5;
+        position: relative;
+        top: var(--top);
+
         ${mq['md']} {
           font-size: 1.2em;
         }
@@ -376,10 +388,12 @@ const Events = () => {
           display: flex;
           flex-direction: column;
           align-items: center;
-          height: 5800px;
-          justify-content: space-evenly;
+          height: 6600px;
+          justify-content: space-around;
           width: 100%;
           max-width: 1500px;
+
+          padding-top: 150px;
         `}
       >
         {/* <div className="sprite1">
@@ -413,17 +427,6 @@ const Events = () => {
                 .toLowerCase()
                 .replace(/ /g, '-')}`}
               navigate={navigate}
-              className={
-                index === 4
-                  ? 'mt-custom-1'
-                  : index === 5
-                  ? 'mt-5'
-                  : index === 6
-                  ? 'mt-5'
-                  : index === 7
-                  ? 'mt-custom-2'
-                  : ''
-              }
             />
           )
         })}

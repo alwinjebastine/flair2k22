@@ -1,5 +1,6 @@
 import React from 'react'
 import licet from '../assets/images/licet.png'
+import flair from '../assets/images/Logo_with_2k22.png'
 
 export const About = () => {
   return (
@@ -68,20 +69,20 @@ export const About = () => {
             <div className="d-md-flex justify-content-between align-items-start my-3">
               <div>
                 <h4 className="h4 text-gradient my-3">Our Vision</h4>
-                <p className='lh-base text-start'>
+                <p className="lh-base text-start">
                   To Build Proficient Information Technologists Through Moral,
                   Ethical And Technological Standards For The Societal
                   Well-being.
                 </p>
               </div>
-              <div className='ms-md-3'>
+              <div className="ms-md-3">
                 <h4 className="h4 text-gradient my-3">Our Mission</h4>
                 <p className="text-start lh-base">
                   <ul className="ul">
                     <li>
-                      • To provide a practice oriented methodology with access to
-                      contemporary knowledge in Information Technology for the
-                      betterment of the society
+                      • To provide a practice oriented methodology with access
+                      to contemporary knowledge in Information Technology for
+                      the betterment of the society
                     </li>
                     <li>
                       • To prepare students for competent careers in Information
@@ -102,8 +103,26 @@ export const About = () => {
               </div>
             </div>
           </div>
+          <div className="pt-5">
+            <h2 className="h2 fs-1 text-gradient mt-5">Flair 2k22</h2>
+            <img src={flair} alt="flair" className="img-fluid rounded-3 mb-5" />
+            <p className="fs-6 lh-base" style={{ textAlign: 'justify' }}>
+              Flair 2K22 is a national level technical symposium that usually
+              takes place for a day and mostly occurs on annual basis. It is
+              organized by the Department of Information Technology, LICET. The
+              main aim of this multi- faceted event is to motivate the students
+              to apply their technological skills to comprehend and analyse
+              complex real world problems to design and implement the feasible
+              solutions. Over 100 Colleges from across the city and outside the
+              city are invited every year to participate and experience the
+              Extravaganza. Flair provides a great opportunity for the aspiring
+              students to showcase their talents and to challenge their
+              potentiality.It is a chance to improve the confidence and
+              competency skill among the students. Its a great exposure and will
+              be a remarkable experience for every participants.
+            </p>
+          </div>
         </div>
-        {/* </div> */}
       </section>
     </>
   )
