@@ -3,7 +3,7 @@
 import { css, jsx } from '@emotion/react'
 import { motion, useAnimation, AnimationControls } from 'framer-motion'
 import { useNavigate, NavigateFunction } from 'react-router-dom'
-import Woodsprite from '../assets/images/Woodsprite.png'
+// import Woodsprite from '../assets/images/Woodsprite.png'
 
 import events from '../utils/events'
 import mq from '../utils/mq'
@@ -24,19 +24,14 @@ const BgSvg = ({
         display: flex;
         align-items: center;
         flex-direction: column;
-
         svg {
           position: absolute;
           z-index: 1;
+          // max-width: 100%;
           width: 350px;
           height: auto;
           --mt: 60px;
         }
-
-        // ${mq['lg']} {
-        //   svg {
-        //   }
-        // }
       `}
     >
       <svg
@@ -178,17 +173,12 @@ const Card = (props: CardsProps) => {
       }}
       className={`bg-dark rounded-curve shadow-white p-md-5 p-4 d-flex justify-content-center align-items-start mr-card ${props.className}`}
       css={css`
-        // position: relative;
         min-height: 150px;
         min-width: 250px;
         max-width: 500px;
-        // background-color: var(--white);
-        // padding: 30px 0 30px 50px;
-
         z-index: 5;
         ${mq['md']} {
           font-size: 1.2em;
-          // padding: 30px 0 30px 60px;
         }
 
         ${mq['lg']} {
@@ -200,10 +190,6 @@ const Card = (props: CardsProps) => {
     >
       <div
         css={css`
-          // position: absolute;
-          // left: 0;
-          // top: 25px;
-
           font-family: var(--font-sans);
           display: flex;
           flex-direction: column;
@@ -335,13 +321,11 @@ const Events = () => {
       css={css`
         width: 100%;
         padding: 40px 50px 0 50px;
-        // color: var(--black);
-
         display: flex;
         flex-direction: column;
         align-items: center;
-        // background-color: var(--white);
       `}
+      id="events"
     >
       <h2
         css={css`
@@ -380,7 +364,7 @@ const Events = () => {
           max-width: 1500px;
         `}
       >
-        <div className="sprite1">
+        {/* <div className="sprite1">
           <img
             src={Woodsprite}
             alt="avatar"
@@ -395,7 +379,7 @@ const Events = () => {
             className="img-fluid"
             style={{ width: '200px' }}
           />
-        </div>
+        </div> */}
         {events.map((event, index) => {
           return (
             <Card
