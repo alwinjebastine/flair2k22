@@ -328,14 +328,6 @@ const Card = (props: CardsProps) => {
         >
           More Info!
         </button>
-        <button
-          onClick={() => {
-            props.navigate(props.register)
-          }}
-          className="btn btn-gradient rounded-pill px-3 py-1 mt-3 text-white ms-3"
-        >
-          Register!
-        </button>
       </div>
     </motion.div>
   )
