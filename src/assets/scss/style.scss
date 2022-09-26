@@ -227,3 +227,38 @@ a {
 .mt-custom-2 {
   margin-top: -15rem !important;
 }
+
+.hover-gradient {
+  &:hover {
+    background-color: $cyan; //fallback color
+    background-image: linear-gradient(to right, $cyan, $violet);
+    background-size: 100%;
+    background-repeat: repeat;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-background-clip: text;
+    -moz-text-fill-color: transparent;
+    background-clip: text;
+  }
+}
+
+// scrollbar styles
+/* width */
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #232323;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgb(74, 74, 74);
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
