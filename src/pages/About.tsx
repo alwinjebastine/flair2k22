@@ -125,7 +125,7 @@ export const About = () => {
             <img
               src={flair}
               alt="flair"
-              style={{ width: '50%' }}
+              style={{ width: '25%' }}
               className="img-fluid rounded-3 mb-5"
             />
             <p

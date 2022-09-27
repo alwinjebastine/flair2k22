@@ -136,12 +136,26 @@ const Hero = () => {
                   font-size: 1em;
                   margin-bottom: 15px;
                   ${mq['lg']} {
+                    font-size: 2.2em;
+                    margin-bottom: 20px;
+                  }
+                `}
+              >
+                Department of Information Technology
+              </h2>
+              <h2
+                className="h2 mb-0 ms-md-2 lh-base italics me-md-3 me-lg-5"
+                css={css`
+                  font-family: var(--font-sans);
+                  font-size: 1em;
+                  margin-bottom: 15px;
+                  ${mq['lg']} {
                     font-size: 1.8em;
                     margin-bottom: 20px;
                   }
                 `}
               >
-                Department of Information Technology organises
+                organises
               </h2>
               <img
                 src={flair}
