@@ -6,6 +6,7 @@ import { motion } from 'framer-motion'
 import licet from '../assets/images/licet.png'
 import mq from '../utils/mq'
 import React from 'react'
+import flair from '../assets/images/Logo_with_2k22-1.png'
 
 const DownArrow = ({ xCss, ...props }: IconProps) => (
   <motion.svg
@@ -120,17 +121,39 @@ const Hero = () => {
             bottom: 100px;
           `}
         >
-          <div className="d-md-flex justify-content-center align-items-center">
-            <img
+          <div className="d-md-flex flex-column justify-content-center">
+            {/* <img
               src={licet}
               className="img-fluid"
               alt="licet"
               style={{ width: '150px', height: '150px' }}
-            />
-            <h2 className="h2 mb-0 ms-md-2 text-gradient lh-base">
-              Department of Information Technology <br />
-              presents you...
-            </h2>
+            /> */}
+            <div className="text-center">
+              <h2
+                className="h2 mb-0 ms-md-2 fw-bold lh-base italics"
+                css={css`
+                  font-family: var(--font-sans);
+                  font-size: 1.2em;
+                  margin-bottom: 15px;
+                  font-weight: bold;
+
+                  ${mq['lg']} {
+                    font-size: 1.7em;
+                    margin-bottom: 20px;
+                  }
+                `}
+              >
+                Department of Information Technology presents
+              </h2>
+              <img
+                src={flair}
+                alt="flair"
+                css={css`
+                  width: 40%;
+                `}
+                className="img-fluid rounded-3 mt-3"
+              />
+            </div>
           </div>
           <motion.h1 css={tagLineCss} className="mt-md-5 mt-3 mb-md-4 mb-3">
             A rendezvous beyond the horizon!

@@ -5,7 +5,7 @@ import { motion } from 'framer-motion'
 import { useState, useEffect } from 'react'
 import mq from '../utils/mq'
 import NavList from './NavList'
-import logo from '../assets/images/Logo.png'
+import logo from '../assets/images/logo-1.png'
 
 const HamMenu = ({ closeMenu }: { closeMenu: () => void }) => {
   return (

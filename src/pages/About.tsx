@@ -104,7 +104,6 @@ export const About = () => {
             </div>
           </div>
           <div className="pt-5">
-            <h2 className="h2 fs-1 text-gradient mt-5">Flair 2k22</h2>
             <img src={flair} alt="flair" className="img-fluid rounded-3 mb-5" />
             <p className="fs-6 lh-base" style={{ textAlign: 'justify' }}>
               Flair 2K22 is a national level technical symposium that usually
