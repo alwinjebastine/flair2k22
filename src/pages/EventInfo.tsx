@@ -6,6 +6,7 @@ const EventInfo = () => {
   const [eventDeets, setEventDeets]: any = React.useState(null)
   const { ename } = useParams()
   const navigate = useNavigate()
+  console.log(ename);
   useEffect(() => {
     setEventDeets(
       events.find(

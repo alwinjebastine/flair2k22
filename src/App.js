@@ -9,6 +9,7 @@ import { Contact } from './pages/Contact'
 import 'bootstrap/dist/js/bootstrap.js'
 import './assets/scss/style.scss'
 import Events from './components/Events'
+import EventInfo from './pages/EventInfo'
 
 const App = () => {
   return (
@@ -22,6 +23,7 @@ const App = () => {
           {/* <Route path="/register" element={<Register />} /> */}
           <Route path="/register/:rname" element={<Register />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/events/:ename" element={<EventInfo />} />
         </Routes>
       </BaseLayout>
     </Router>
