@@ -339,15 +339,21 @@ const Events = () => {
   const controls2 = useAnimation()
 
   return (
-    <section
+    <motion.div
+      initial={{ x: -100, opacity: 0 }}
+      whileInView={{ x: 0, opacity: 1 }}
+      transition={{ duration: 0.8 }}
       css={css`
         width: 100%;
-        padding: 40px 50px 0 50px;
+        padding: 85px 50px 0 50px;
         display: flex;
         flex-direction: column;
         align-items: center;
+        ${mq['lg']} {
+          padding: 40px 50px 0 50px;
+        }
       `}
-      id="events"
+      // className="pt-5 pt-md-2 pt-5 mt-5 mt-lg-0"
     >
       <h2
         css={css`
@@ -423,7 +429,7 @@ const Events = () => {
           )
         })}
       </div>
-    </section>
+    </motion.div>
   )
 }
 

@@ -3,16 +3,16 @@ import { Routes, Route, useNavigate } from 'react-router-dom'
 import events from '../utils/events'
 import EventInfo from './EventInfo'
 
-export const Events = () => {
-  return (
-    <Routes>
-      <Route path="/" element={<EventsBase />} />
-      <Route path="/:ename" element={<EventInfo />} />
-    </Routes>
-  )
-}
+// export const Events = () => {
+//   return (
+//     <Routes>
+//       <Route path="/" element={<EventsBase />} />
+//       {/* <Route path="/:ename" element={<EventInfo />} /> */}
+//     </Routes>
+//   )
+// }
 
-export const EventsBase = () => {
+export const Events = () => {
   const navigate = useNavigate()
 
   return (
@@ -38,7 +38,7 @@ export const EventsBase = () => {
                   </div>
                   <div className="col-md-8 align-self-start p-md-3 py-3">
                     <h3 className="h4 fw-bold text-gradient">{event.title}</h3>
-                    <p className='lh-base'>{event.description}</p>
+                    <p className="lh-base">{event.description}</p>
                     <div className="text-md-end text-center mt-3">
                       <button
                         className="btn btn-gradient rounded-pill px-3 mt-md-5 text-white"

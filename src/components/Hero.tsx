@@ -38,9 +38,9 @@ const tagLineCss = css`
   line-height: 1.3em;
   ${mq['lg']} {
     line-height: 1em;
-    font-size: 40px;
+    font-size: 30px;
   }
-  text-align: left;
+  // text-align: left;
   position: relative;
   max-width: 600px;
   width: 100%;
@@ -121,29 +121,27 @@ const Hero = () => {
             bottom: 100px;
           `}
         >
-          <div className="d-md-flex flex-column justify-content-center">
+          <div className="d-md-flex flex-column align-items-center justify-content-center">
             {/* <img
               src={licet}
               className="img-fluid"
               alt="licet"
               style={{ width: '150px', height: '150px' }}
             /> */}
-            <div className="text-center">
+            <div className="text-center  me-md-3 me-lg-5">
               <h2
-                className="h2 mb-0 ms-md-2 fw-bold lh-base italics"
+                className="h2 mb-0 ms-md-2 fw-bold lh-base italics me-md-3 me-lg-5"
                 css={css`
                   font-family: var(--font-sans);
-                  font-size: 1.2em;
+                  font-size: 1em;
                   margin-bottom: 15px;
-                  font-weight: bold;
-
                   ${mq['lg']} {
-                    font-size: 1.7em;
+                    font-size: 1.8em;
                     margin-bottom: 20px;
                   }
                 `}
               >
-                Department of Information Technology presents
+                Department of Information Technology organises
               </h2>
               <img
                 src={flair}
@@ -151,27 +149,29 @@ const Hero = () => {
                 css={css`
                   width: 40%;
                 `}
-                className="img-fluid rounded-3 mt-3"
+                className="img-fluid rounded-3 mt-3 me-md-3 me-lg-5"
               />
             </div>
+            <motion.h1
+              css={tagLineCss}
+              className="mt-md-5 mt-3 mb-md-4 mb-3 ms-2  ms-md-3 ms-lg-5"
+            >
+              A rendezvous beyond the horizon!
+            </motion.h1>
+            <div className=" me-md-3 me-lg-5">
+              <motion.a
+                href="/events"
+                className="h6 btn-gradient rounded-pill p-2 px-3 text-dark fw-bold ms-2 ms-md-0 me-md-3 me-lg-5"
+              >
+                Wanna peek?
+              </motion.a>
+            </div>
           </div>
-          <motion.h1 css={tagLineCss} className="mt-md-5 mt-3 mb-md-4 mb-3">
-            A rendezvous beyond the horizon!
-          </motion.h1>
-          <motion.a
-            href="#events"
-            className="h6 btn-gradient rounded-pill p-2 px-3 text-dark fw-bold"
-          >
-            Wanna peek?
-          </motion.a>
         </motion.div>
       </div>
-      <div
-        className="d-flex justify-content-center align-items-center"
-        style={{ marginTop: '-50px' }}
-      >
+      {/* <div className="ms-5 ps-5" style={{ marginTop: '-50px' }}>
         <DownArrow />
-      </div>
+      </div> */}
     </React.Fragment>
   )
 }

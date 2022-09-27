@@ -1,22 +1,37 @@
 export default [
   {
-    question: 'Is it possible to come to LICET through train?',
+    question: 'Eligibility',
     answer:
-      'Yes, You can. You need to get down at Nungambakkam Railway station and you can enter into Loyola side gate.',
+      'All Engineering and Arts College students of any Department are eligible to participate in Flair2k22.',
   },
   {
-    question: 'Can I get the possible bus routes?',
+    question: 'Things to be brought',
     answer:
-      'Sometimes, please do check google maps whether bus or train is most feasible. If your option is bus, then do a search on maps.',
+      'College ID card and Bonafide certificate are necessary to be brought on the day of the symposium to participate in Flair2k22.',
   },
   {
-    question: 'What are the things I must bring?',
+    question: 'Dress Code',
     answer:
-      'Student ID card and bonafide from the college is compulsory. For few events, you can bring your laptop.',
+      'Any decent attire, most preferrably formals, collared T-shirts for boys and Churidar for girls. No Jeans and Round neck shirts are allowed.',
   },
   {
-    question: 'Will certificates be provided to all the participants?',
+    question: ' No Mobile phone',
     answer:
-      'Yes. Participation certificate will be provided to all those who participate and winner certificate will be provided to the winners of the events.',
+      'Participants are not allowed to use their mobile phones inside the campus. The phone should be either silent or switched off.',
+  },
+  {
+    question: 'Timing',
+    answer:
+      'Participants are expected to assemble 15 minutes prior to the event and being late is not entertained.',
+  },
+  {
+    question: 'No Negotiations',
+    answer:
+      'Judges decision will be final and binding. No arguments regarding the results will be entertained.',
+  },
+  {
+    question: 'Queries',
+    answer:
+      'Event specific queries can be reported to the event-incharge at the venue. Any grievances and other forms of misconduct must be reported to the President (Sandesh A) or Vice-President (Crispin).',
   },
 ]

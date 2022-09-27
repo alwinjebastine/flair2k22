@@ -1,22 +1,33 @@
 import React from 'react'
 import licet from '../assets/images/licet.png'
-import flair from '../assets/images/Logo_with_2k22.png'
+import flair from '../assets/images/Logo_with_2k22-1.png'
+import { css, jsx, SerializedStyles } from '@emotion/react'
+import { motion, useAnimation, AnimationControls } from 'framer-motion'
+import mq from '../utils/mq'
 
 export const About = () => {
   return (
     <>
-      <section className="container d-md-flex justify-content-center align-items-center w-100 my-5 card bg-transparent">
+      <motion.section
+        initial={{ x: -100, opacity: 0 }}
+        whileInView={{ x: 0, opacity: 1 }}
+        transition={{ duration: 0.8 }}
+        className="container d-md-flex justify-content-center align-items-center w-100 my-5 card bg-transparent"
+      >
         {/* <div className="card card1 bg-dark all-text-white mt-5 rounded-curve shadow-white p-3 text-center"> */}
-        <h1 className="h1 my-5 text-center fw-bold">About Us</h1>
+        <h2 className="my-5 text-center fw-bold h2 font-4">About Us</h2>
         <div className="w-75 text-center">
           <div className="">
-            <div>
+            {/* <div>
               <h2 className="h2 text-gradient">
                 Loyola - Icam College of Engineering and Technology
               </h2>
             </div>
-            <img src={licet} className="" />
-            <p className="fs-5 lh-base">
+            <img src={licet} className="" /> */}
+            <p
+              className="fs-6 fs-md-5 lh-base"
+              style={{ textAlign: 'justify' }}
+            >
               The Loyola-ICAM (Institute Catholique d’Arts et Metiers) College
               of Engineering and Technology (LICET) is a Christian minority
               institution, founded in 2010 by the Jesuit Chennai Mission to form
@@ -30,7 +41,7 @@ export const About = () => {
             </p>
           </div>
           <div>
-            <h2 className="h2 text-gradient my-5">
+            <h2 className="h2 text-gradient my-5 fw-bold">
               Department of Information Technology
             </h2>
             <img
@@ -38,7 +49,10 @@ export const About = () => {
               alt="it"
               className="img-fluid rounded-3 mb-5"
             />
-            <p className="fs-6 lh-base" style={{ textAlign: 'justify' }}>
+            <p
+              className="fs-6 fs-md-5 lh-base"
+              style={{ textAlign: 'justify' }}
+            >
               The department has vibrant and active faculty who are continually
               updating their knowledge and skills through numerous quality
               improvement initiatives. The students are provided with every
@@ -66,47 +80,59 @@ export const About = () => {
               that our students can be expert learners and provide solutions for
               the global community.
             </p>
-            <div className="d-md-flex justify-content-between align-items-start my-3">
+            <div className=" justify-content-between align-items-start my-3">
               <div>
-                <h4 className="h4 text-gradient my-3">Our Vision</h4>
-                <p className="lh-base text-start">
+                <h4 className="h4 text-gradient my-3 fw-bold">Our Vision</h4>
+                <p className="lh-base text-start fs-6 fs-md-5">
                   To Build Proficient Information Technologists Through Moral,
                   Ethical And Technological Standards For The Societal
                   Well-being.
                 </p>
               </div>
               <div className="ms-md-3">
-                <h4 className="h4 text-gradient my-3">Our Mission</h4>
-                <p className="text-start lh-base">
-                  <ul className="ul">
-                    <li>
-                      • To provide a practice oriented methodology with access
-                      to contemporary knowledge in Information Technology for
-                      the betterment of the society
+                <h4 className="h4 text-gradient my-3 fw-bold">Our Mission</h4>
+                <p className="text-start lh-base pb-2">
+                  <div className="fs-6 fs-md-5">
+                    <li style={{ textAlign: 'justify' }}>
+                      To provide a practice oriented methodology with access to
+                      contemporary knowledge in Information Technology for the
+                      betterment of the society
                     </li>
-                    <li>
-                      • To prepare students for competent careers in Information
+                    <li style={{ textAlign: 'justify' }}>
+                      To prepare students for competent careers in Information
                       Technology through innovation, team spirit, ethics and
                       entrepreneurial skills in evolving technologies
                     </li>
-                    <li>
-                      • To integrate our department with quality organizations
+                    <li style={{ textAlign: 'justify' }}>
+                      To integrate our department with quality organizations
                       worldwide and promote industry institute interaction for
                       symbiotic benefits
                     </li>
-                    <li>
-                      • To promote interdisciplinary research through innovation
+                    <li style={{ textAlign: 'justify' }}>
+                      To promote interdisciplinary research through innovation
                       and reflective thinking
                     </li>
-                  </ul>
+                  </div>
                 </p>
               </div>
             </div>
           </div>
+          <div
+            className="rounded bg-white mt-5 mx-auto"
+            style={{ height: '1px', width: '90%' }}
+          ></div>
           <div className="pt-5">
-            <img src={flair} alt="flair" className="img-fluid rounded-3 mb-5" />
-            <p className="fs-6 lh-base" style={{ textAlign: 'justify' }}>
-              Flair 2K22 is a national level technical symposium that usually
+            <img
+              src={flair}
+              alt="flair"
+              style={{ width: '50%' }}
+              className="img-fluid rounded-3 mb-5"
+            />
+            <p
+              className="fs-6 fs-md-5 lh-base"
+              style={{ textAlign: 'justify' }}
+            >
+              Flair 2K22 is a National level technical symposium that usually
               takes place for a day and mostly occurs on annual basis. It is
               organized by the Department of Information Technology, LICET. The
               main aim of this multi- faceted event is to motivate the students
@@ -122,7 +148,7 @@ export const About = () => {
             </p>
           </div>
         </div>
-      </section>
+      </motion.section>
     </>
   )
 }

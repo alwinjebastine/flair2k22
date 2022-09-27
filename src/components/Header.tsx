@@ -265,7 +265,7 @@ const Header = () => {
             }
 
             ${mq['lg']} {
-              margin-left: 25px;
+              // margin-left: 25px;
             }
           }
         `}

@@ -4,6 +4,7 @@
 
 // font imports
 @import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Handlee&display=swap');
 
 // variables
 $white: #fff;
@@ -72,6 +73,27 @@ body {
   color: $white;
   background-color: #000;
 }
+
+.snap-container {
+  scroll-snap-type: y mandatory;
+  overflow-y: scroll;
+  height: 100vh;
+}
+
+.font-1 {
+  font-family: 'Handlee', sans-serif !important;
+}
+.font-2 {
+  font-family: 'Torkus';
+}
+.font-3 {
+  font-family: 'Raleway', sans-serif !important; 
+}
+
+.font-4 {
+  font-family:'Julius Sans One', sans-serif !important; 
+}
+
 
 .bg-white {
   background-color: $white;

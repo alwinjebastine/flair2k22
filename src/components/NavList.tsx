@@ -10,7 +10,7 @@ const NavList = ({ closeMenu }: { closeMenu?: () => void }) => {
           <a
             onClick={() => {
               window.getSelection()?.removeAllRanges()
-              item.title === 'Events' && navigate('/')
+              // item.title === 'Events' && navigate('/')
               window.scrollTo(0, 0)
               setTimeout(() => {
                 if (item.title === 'Events') {

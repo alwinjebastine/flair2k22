@@ -4,10 +4,10 @@ const Footer = () => {
       <hr />
       <div className="d-flex justify-content-center align-items-center mt-0 mb-4">
         <div className="col-8 d-md-flex justify-content-md-between justify-content-sm-center d-grid gap-3">
-          <a href="/home">Home</a>
+          <a href="/">Home</a>
           <a href="/about">About</a>
-          <a href="/#events">Events</a>
-          <a href="/contact">Need Help?</a>
+          <a href="/events">Events</a>
+          <a href="/contact">Contact Us</a>
         </div>
       </div>
       <h6>©2022 LICET. All Rights Reserved.</h6>
