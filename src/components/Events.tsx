@@ -1,6 +1,6 @@
 /** @jsxRuntime classic */
 /** @jsx jsx */
-import { css } from '@emotion/react'
+import { css, jsx, SerializedStyles } from '@emotion/react'
 import { motion, useAnimation, AnimationControls } from 'framer-motion'
 import { useNavigate, NavigateFunction } from 'react-router-dom'
 // import Woodsprite from '../assets/images/Woodsprite.png'
