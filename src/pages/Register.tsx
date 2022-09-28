@@ -158,7 +158,7 @@ export const Register = () => {
 
             <iframe
               // src="https://docs.google.com/forms/d/e/1FAIpQLSew4B6yXGAZeZLBHRspzsp_QeeB1Nn4jr7VC6DD17_DAj1UbQ/viewform?embedded=true"
-              src={`${eventDeets?.register}/viewform/?embedded=true`}
+              src={`${eventDeets?.register}/viewform?embedded=true`}
               // width="500"
               style={{ minHeight: '2000px' }}
               className="w-100"
