@@ -29,7 +29,7 @@ export default [
     register:
       'https://docs.google.com/forms/d/e/1FAIpQLSfqC0QakAiKkQz27BxHNmmelcTidzpzWpIKTCNzSwJZN4ecvg',
     image: trade_title,
-    when: '8th OCT 09:00-10:50 AM',
+    when: '8th OCT 09:30-10:50 AM',
     where: 'A21',
   },
   {
@@ -80,7 +80,7 @@ export default [
     register:
       'https://docs.google.com/forms/d/e/1FAIpQLScL8szWgn6pXK-vpVSx91glu_llpWya5G4N91p3eyIzHe-HTQ',
     image: masters_title,
-    when: '8th OCT 01:30-02:30 PM',
+    when: '8th OCT 01:30-03:30 PM',
     where: 'H23',
   },
   {
@@ -178,7 +178,7 @@ export default [
     register:
       'https://docs.google.com/forms/d/e/1FAIpQLSewC0CgDxpLIdnuebY4vNZNArHYOTfWAbb666dmYjtqy8iyIg',
     image: merge_title,
-    when: '8th OCT 01:40-03:00 PM',
+    when: '8th OCT 10:30-12:30 PM',
     where: 'A21',
   },
   {
@@ -202,7 +202,7 @@ export default [
     register:
       'https://docs.google.com/forms/d/e/1FAIpQLSdnokMNtV6xDWoquj4XXC77h7RWppdl94IR7VCXksoXdE7MmQ',
     image: stuck_title,
-    when: '8th OCT 10:30 AM -12:30 PM',
+    when: '8th OCT 9:30 AM -12:30 PM',
     where: 'J14',
   },
   {
