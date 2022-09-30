@@ -150,7 +150,7 @@ export default [
     • Business model - How are you going to make money? Pricing? Margins?
     • Traction - What can you achieve? 
     • Team - Who is on your team?
-    • Teams must include at least 2 active members
+    • Teams must include exactly 3 active members
     `,
     register:
       'https://docs.google.com/forms/d/e/1FAIpQLSfKn7dMRppuRkaO6Qb5gfJb21hnBBsq4ErYIz8TiG6ULO7WTg',
@@ -164,7 +164,8 @@ export default [
       'It is a structured argument where two sides speak alternatively for and against a particular contention. The more determined you are, the more likely you are to win.',
     href: '/events/merge-conflicts',
     rules: `
-    • There are two teams, each consists of four members
+    • There are two teams, each consists of two
+ members
     • The team which wins the toss will choose their role  (affirmative,negative)
     • Before the opening of  the debate both teams will have 5 minutes to get ready for the debate.They can write some notes and questions on a piece of paper and use them during the debate.
     • Using a dictionary during the debate is not permitted.
