@@ -2,7 +2,7 @@ export default [
   {
     question: 'Eligibility',
     answer:
-      'All Engineering and Arts College students of any Department are eligible to participate in Flair2k22.',
+      'All Engineering College students of any Department are eligible to participate in Flair2k22.',
   },
   {
     question: 'Things to be brought',
