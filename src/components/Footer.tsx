@@ -12,7 +12,7 @@ const Footer = () => {
       </div>
       <h6>©2022 LICET. All Rights Reserved.</h6>
       <h6 className="mt-3">
-        Made with <del>love</del> keyboard by 3 dev-idiots
+        Made with <del>love</del> keyboard by Daniel, Alwin & Crispin.
       </h6>
     </section>
   )
