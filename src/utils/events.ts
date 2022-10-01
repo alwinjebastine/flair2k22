@@ -15,16 +15,45 @@ export default [
       'A competition to enhance your ability in the art of academic writing or making papers your projects or research works and presenting it in front of the juries',
     href: '/events/trade-your-theory',
     rules: `
-    •Registration closes by 3rd Oct’22.
-    •Abstract to be submitted by 6th Oct’22.
-    •Shortlisted teams must present on 8th Oct’22 (9.00am - 11.00am)
-    •The top 3 papers will be selected as winners.
-    •The paper is to be attached through mail (Subject should be TITLE of the Paper).
-    •The mail must contain :-
-      Name of authors
-      College Names
-      Departments
-      Author’s Phone Numbers and Email Addresses.
+    Team:
+        1. Team of max 3 members.
+        2. Teams can have participants from different institutions.
+
+    Abstract & Paper:
+        1. Abstract limited to 250 words.
+        2. Submitted papers must be in IEEE format.
+        3. Paper length is limited to 6 pages and must be in .pdf, .docx, or .doc formats.
+        4. Papers must not be published before anywhere or be under consideration for publication in any journal or conference. 
+        5. You may take topics like;
+          - Smart Home Automation 
+          - Big Data analytics with E-commerce stores
+          - Garbage Management System with IOT
+          - Air Water Pollution Sensing Smart Watch
+          - AI Bartender & Refreshment Making Machine
+          - etc...
+
+    Presentation:
+        1. 7 min presentation 3 min Q/A
+        2. Plagiarism is not allowed. Original works only!
+        3. Foul Language is not encouraged.
+        4. Present only in English
+        
+    General Rules:
+        1. Registration closes by 3rd Oct’22 (10:00pm).
+        2. Submit ABSTRACT by 3rd Oct’22 (11:00pm).
+        3. Email your ABSTRACT to flairit@licet.ac.in (Subject: “Abstract- TITLE” eg: “Abstract- Smart Garbage Management with IOT”).
+        4. By 5th the shortlisted teams will be informed (via email and phone call)
+        5. Shortlisted teams must submit the PPT slides and PAPER by 6th Oct’22 .
+        6. Email your PAPERS and PPTs to flairit@licet.ac.in (Subject: “Paper- TITLE” eg: “Paper- Smart Garbage Management with IOT”).
+        7. All emails must contain :- 
+          - Name of authors,
+          - College Names,
+          - Departments, 
+          - Author’s Phone Numbers and Email Addresses.
+        8. Shortlisted teams must present on 8th Oct’22 (9.00am - 11.00am)
+        9. Bring a hardcopy of the PPT and Paper.
+        10. The top 3 papers will be selected as winners.
+        11. The winning team will compete with other departments for the overall Winner’s Award.
     `,
     register:
       'https://docs.google.com/forms/d/e/1FAIpQLSfqC0QakAiKkQz27BxHNmmelcTidzpzWpIKTCNzSwJZN4ecvg',
