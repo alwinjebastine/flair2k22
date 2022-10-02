@@ -99,8 +99,9 @@ export default [
     href: '/events/masters-of-algo-land',
     rules: `
     • It is an individual event.
-    • Participants will be given 1 hour time to code ( two rounds of 30 minutes each).
-    • First round will contain 3 questions and the second round will contain 2 questions.
+    • Participants will be given 1.5 hours of time to code ( two rounds of 45minutes each).
+    • The first round will contain 30 easy-level questions and the second round will contain 6 questions. 
+    • The Contest is going to be conducted on the HackerRank platform.
     • Each problem will have a specified point value. The more difficult the problem, the more points a correct solution will receive.
     • Each round is an elimination round.
     • Electronic gadgets are prohibited.
