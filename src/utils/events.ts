@@ -42,8 +42,8 @@ export default [
         4. Present only in English
         
     General Rules:
-        1. Registration closes by 3rd Oct’22 (10:00pm).
-        2. Submit ABSTRACT by 3rd Oct’22 (11:00pm).
+        1. Registration closes by 4th Oct’22 (10:00pm).
+        2. Submit ABSTRACT by 4th Oct’22 (11:00pm).
         3. Email your ABSTRACT to flairit@licet.ac.in (Subject: “Abstract- TITLE” eg: “Abstract- Smart Garbage Management with IOT”).
         4. By 5th the shortlisted teams will be informed (via email and phone call)
         5. Shortlisted teams must submit the PPT slides and PAPER by 6th Oct’22 .
