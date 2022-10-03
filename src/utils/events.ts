@@ -24,13 +24,16 @@ export default [
         2. Submitted papers must be in IEEE format.
         3. Paper length is limited to 6 pages and must be in .pdf, .docx, or .doc formats.
         4. Papers must not be published before anywhere or be under consideration for publication in any journal or conference. 
-        5. You may take topics like;
-          - Smart Home Automation 
-          - Big Data analytics with E-commerce stores
-          - Garbage Management System with IOT
-          - Air Water Pollution Sensing Smart Watch
-          - AI Bartender & Refreshment Making Machine
+        5. You may take topics like, the following:
+          - Artificial intelligence, 
+          - Cyber security
+          - Blockchain technology 
+          - Cloud computing
+          - Deep learning and machine learning 
+          - Image Processing
+          - Data Analytics
           - etc...
+        6. But not limited to only these, the only limit is your imagination!
 
     Presentation:
         1. 7 min presentation 3 min Q/A
