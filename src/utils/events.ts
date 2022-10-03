@@ -180,7 +180,7 @@ export default [
     • Business model - How are you going to make money? Pricing? Margins?
     • Traction - What can you achieve? 
     • Team - Who is on your team?
-    • Teams must include exactly 3 active members
+    • Teams must include 1-3 active members
     `,
     register:
       'https://docs.google.com/forms/d/e/1FAIpQLSfKn7dMRppuRkaO6Qb5gfJb21hnBBsq4ErYIz8TiG6ULO7WTg',
